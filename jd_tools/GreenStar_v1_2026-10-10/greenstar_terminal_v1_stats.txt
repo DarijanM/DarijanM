@@ -1,0 +1,11 @@
+GreenStar terminal v1 – statistika (10.10.2026)
+
+MASTER (greenstar_terminal_master_v1.blend): UKUPNO 29628 tris, ~74 draw callova (tipke kao zasebni objekti)
+  gsMountCable 1888, gsMountParts 3768, gsMountSwivel 4972, gsMountTilt 1312, gsScreen 2, gsLightbar_01..15 po 2, kućište + 24 tipke ostatak
+IGRA (greenstar_terminal_igra_v1.blend): UKUPNO 7232 tris, ~26 draw callova
+  gsHousing 4736 (housing, slot, key, print), gsMountParts 1252 (steelBlack, rubber – kabel spojen), gsMountSwivel 876 (steelBlack, yellow), gsMountTilt 336 (steelBlack, yellow), gsScreen 2, gsLightbar_01..15 po 2
+clipDistance: kućište/nosač 25, tipke/ekran 15, segmenti 12
+
+Redovi ekrana (sidro gsRow/gsVal = visina tipke):
+  A 256.7 mm, B 239.0, C 221.3, D 203.8, E 186.5, F 169.2, G 152.1
+VALIDACIJA (oba): OK – bez skrivenih objekata, 1 UV sloj, clipDistance na svim meshevima, bez praznih materijala, rotacije 0 / skale 1.

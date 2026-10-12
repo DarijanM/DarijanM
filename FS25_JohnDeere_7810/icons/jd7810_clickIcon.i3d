@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="jd7810_clickIcon" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="Claude (v171)" version="1"/>
+  </Asset>
+  <Files>
+  </Files>
+  <Materials>
+  </Materials>
+  <Shapes>
+  </Shapes>
+  <Scene>
+    <!-- v171: nevidljiva IC ikona za 7810 (Darijan 9.10.: bez zelenih ikona). Samo prazan cvor - klik radi po polozaju clickPointa. -->
+    <TransformGroup name="JD7810_CLEAR" nodeId="1"/>
+  </Scene>
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="104" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+    <author>Brazda Modding (Darijan &amp; Claude)</author>
+    <version>1.0.0.2</version>
+    <title>
+        <en>John Deere 7810 "The Legend"</en>
+    </title>
+
+    <description>
+<en><![CDATA[
+Category: Medium Tractors
+Price: $68,000
+Power: 175 hp
+Max. speed: 40 kph
+
+Transmissions: PowrQuad 20/20, AutoQuad II 20/20 (40 or 50 km/h), Powershift 19/7, IVT AutoPowr (40 or 50 km/h, internal LOW/HIGH ranges). 50 km/h versions: power boost 196 hp with PTO or above 30 km/h.
+
+Controls - while driving (left hand: LAlt + left keyboard block):
+- Displays: LAlt+1/2/3/4 centre LCD A/B/C/D, LAlt+5 JD controls HUD
+- Performance Monitor: LAlt+Q/W previous/next display, LAlt+E ZERO, LAlt+R width step
+- Driving: LAlt+A/S hand throttle -/+, LAlt+F heading lock, LAlt+G HMS headland management, LAlt+T both implements; park lock: Right Alt (or LAlt+6)
+- Drivetrain: LAlt+Y MFWD AUTO/ON/BRAKE ASSIST, LAlt+X rear differential lock, LAlt+C IVT band 1/2/AUTO, LAlt+V/B IVT set speed -/+
+Controls - standing (numeric keypad):
+- LCtrl+Num 9 transmission mode (AutoQuad MANUAL/AUTO/ECO, IVT selector OFF/1/2/3)
+- RShift+Num +/- tyre pressure (hold)
+Game keys / H-shifter: AutoQuad ranges A-E = gears, steps 1-4 = groups; Powershift steps 1-19 = groups.
+Interactive Control: click the Performance Monitor, GreenStar terminal, V selector and phone.
+Physics: realistic shifting, MFWD torque split, traction by tyre size/duals/ballast/soil/moisture/pressure (Brixius), rolling resistance, implement draft, real PTO speeds.
+Engine and transmission sounds: Farming Dud's (Vassili_k98), from FS25_FD_johnDeereSeries7010 - personal use
+
+Changelog Version 1.0.0.2:
+- Added 1.5m narrow wheel configurations
+- Fixed side engine grid color
+
+Changelog Version 1.0.0.1:
+- Improved dashboard
+- Improved animation performance
+- Various visual adjustments
+]]></en>
+<de><![CDATA[
+Shopkategorie: Mittelgroße Traktoren
+Preis: 68.000€
+Leistung: 175 PS
+Höchstgeschwindigkeit: 40 km/h
+
+Changelog Version 1.0.0.1:
+- Dashboard verbessert
+- Verbesserte Performance der Animationen
+- Verschiedene visuelle Anpassungen
+
+Changelog Version 1.0.0.2:
+- Schmale 1,5 m Radkonfiguration hinzugefügt
+- Farbe des seitlichen Motorengitters korrigiert
+]]></de>
+<fr><![CDATA[
+Catégorie: Tracteurs moyens
+Prix: 68 000€
+Puissance: 175 CV
+Vitesse max.: 40 km/h
+
+Changelog Version 1.0.0.1:
+- Amélioration du tableau de bord
+- Amélioration des performances d'animation
+- Divers ajustements visuels
+
+Changelog Version 1.0.0.2:
+- Ajout de configurations de roues étroites de 1,5 m
+- Couleur de la grille du moteur latéral corrigée
+]]></fr>
+    </description>
+
+    <iconFilename>icon_series7810.dds</iconFilename>
+
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/JD7810Core.lua"/>
+        <sourceFile filename="scripts/JD7810Transmission.lua"/>
+        <sourceFile filename="scripts/JD7810Engine.lua"/>
+        <sourceFile filename="scripts/JD7810PTO.lua"/>
+        <sourceFile filename="scripts/JD7810Display.lua"/>
+        <sourceFile filename="scripts/JD7810PerformanceMonitor.lua"/>
+        <sourceFile filename="scripts/JD7810Draft.lua"/>
+        <sourceFile filename="scripts/JD7810AgroGsm.lua"/>
+        <sourceFile filename="scripts/JD7810Cockpit.lua"/>
+        <sourceFile filename="scripts/JD7810Hms.lua"/>
+        <sourceFile filename="scripts/JD7810Seat.lua"/>
+        <sourceFile filename="scripts/JD7810Heading.lua"/>
+        <sourceFile filename="scripts/JD7810HdTextures.lua"/>
+    </extraSourceFiles>
+
+    <actions>
+        <action name="JD7810_HAND_THROTTLE_UP" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_HAND_THROTTLE_DOWN" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_HEADING_LOCK" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_IVT_MODE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_FIELD_CRUISE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_AQ_MODE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_MFWD" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_DIFFLOCK" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_HUD" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_PM_MODE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_PM_PREV" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_PM_ZERO" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_PM_WIDTH" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_IVT_BAND" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_IVT_SET_UP" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_IVT_SET_DOWN" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_LCD_A" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_LCD_B" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_LCD_C" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_LCD_D" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_HMS_TOGGLE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_HMS_ALL" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_TYRE_UP" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_PARK" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_LIGHTS_DOWN" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_WORK_LIGHTS" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="JD7810_TYRE_DOWN" category="VEHICLE" ignoreComboMask="false"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="JD7810_HAND_THROTTLE_UP">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_s"/>
+        </actionBinding>
+        <actionBinding action="JD7810_HAND_THROTTLE_DOWN">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_a"/>
+        </actionBinding>
+        <actionBinding action="JD7810_HEADING_LOCK">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_f"/>
+        </actionBinding>
+        <actionBinding action="JD7810_IVT_MODE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_KP_9"/>
+        </actionBinding>
+        <actionBinding action="JD7810_FIELD_CRUISE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_multiply"/>
+        </actionBinding>
+        <actionBinding action="JD7810_MFWD">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_y"/>
+        </actionBinding>
+        <actionBinding action="JD7810_DIFFLOCK">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_x"/>
+        </actionBinding>
+        <actionBinding action="JD7810_HUD">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_5"/>
+        </actionBinding>
+        <actionBinding action="JD7810_PM_MODE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_w"/>
+        </actionBinding>
+        <actionBinding action="JD7810_PM_PREV">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_q"/>
+        </actionBinding>
+        <actionBinding action="JD7810_PM_ZERO">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_e"/>
+        </actionBinding>
+        <actionBinding action="JD7810_PM_WIDTH">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_r"/>
+        </actionBinding>
+        <actionBinding action="JD7810_IVT_BAND">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_c"/>
+        </actionBinding>
+        <actionBinding action="JD7810_IVT_SET_UP">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_b"/>
+        </actionBinding>
+        <actionBinding action="JD7810_IVT_SET_DOWN">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_v"/>
+        </actionBinding>
+        <actionBinding action="JD7810_LCD_A">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_1"/>
+        </actionBinding>
+        <actionBinding action="JD7810_LCD_B">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_2"/>
+        </actionBinding>
+        <actionBinding action="JD7810_LCD_C">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_3"/>
+        </actionBinding>
+        <actionBinding action="JD7810_LCD_D">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_4"/>
+        </actionBinding>
+        <actionBinding action="JD7810_HMS_TOGGLE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_g"/>
+        </actionBinding>
+        <actionBinding action="JD7810_HMS_ALL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_t"/>
+        </actionBinding>
+        <actionBinding action="JD7810_PARK">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_ralt"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_6"/>
+        </actionBinding>
+        <actionBinding action="JD7810_LIGHTS_DOWN">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_f"/>
+        </actionBinding>
+        <actionBinding action="JD7810_WORK_LIGHTS">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_f"/>
+        </actionBinding>
+        <actionBinding action="JD7810_TYRE_UP">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_rshift KEY_KP_plus"/>
+        </actionBinding>
+        <actionBinding action="JD7810_TYRE_DOWN">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_rshift KEY_KP_minus"/>
+        </actionBinding>
+    </inputBinding>
+
+    <l10n>
+        <text name="input_JD7810_HAND_THROTTLE_UP">
+            <en>Hand throttle +</en>
+            <de>Handgas +</de>
+        </text>
+        <text name="input_JD7810_HEADING_LOCK">
+            <en>Heading lock (compass)</en>
+            <de>Richtung halten (Kompass)</de>
+        </text>
+        <text name="input_JD7810_HAND_THROTTLE_DOWN">
+            <en>Hand throttle -</en>
+            <de>Handgas -</de>
+        </text>
+        <text name="input_JD7810_IVT_MODE">
+            <en>Transmission mode (AutoQuad MANUAL/AUTO/ECO, IVT OFF/1/2/3)</en>
+            <de>IVT-Wahlschalter (AUS / 1 / 2 / 3)</de>
+        </text>
+        <text name="input_JD7810_FIELD_CRUISE">
+            <en>Field Cruise (limit engine rpm)</en>
+            <de>Field Cruise (Motordrehzahl begrenzen)</de>
+        </text>
+        <text name="input_JD7810_AQ_MODE">
+            <en>AutoQuad II: MANUAL / AUTO / ECO</en>
+            <de>AutoQuad II: MANUELL / AUTO / ECO</de>
+        </text>
+        <text name="input_JD7810_MFWD">
+            <en>MFWD: AUTO / ON / BRAKE ASSIST</en>
+            <de>Allrad (MFWD): AUTO / EIN / BREMSUNTERSTÜTZUNG</de>
+        </text>
+        <text name="input_JD7810_DIFFLOCK">
+            <en>Differential lock (rear)</en>
+            <de>Differentialsperre (hinten)</de>
+        </text>
+        <text name="input_JD7810_HUD">
+            <en>JD 7810 controls HUD: show / hide</en>
+            <de>JD 7810 Bedien-HUD: ein / aus</de>
+        </text>
+        <text name="input_JD7810_PM_MODE">
+            <en>Performance Monitor: next display</en>
+            <de>Performance Monitor: nächste Anzeige</de>
+        </text>
+        <text name="input_JD7810_PM_PREV">
+            <en>Performance Monitor: previous display</en>
+            <de>Performance Monitor: vorherige Anzeige</de>
+        </text>
+        <text name="input_JD7810_PM_ZERO">
+            <en>Performance Monitor: ZERO (trip)</en>
+            <de>Performance Monitor: NULL (Teilzähler)</de>
+        </text>
+        <text name="input_JD7810_PM_WIDTH">
+            <en>Performance Monitor: implement width step (WDTH)</en>
+            <de>Performance Monitor: Arbeitsbreite (WDTH)</de>
+        </text>
+        <text name="input_JD7810_IVT_BAND">
+            <en>IVT band 1 / 2 / AUTO</en>
+            <de>IVT Fahrbereich 1 / 2</de>
+        </text>
+        <text name="input_JD7810_IVT_SET_UP">
+            <en>IVT set speed +</en>
+            <de>IVT Sollgeschwindigkeit +</de>
+        </text>
+        <text name="input_JD7810_IVT_SET_DOWN">
+            <en>IVT set speed -</en>
+            <de>IVT Sollgeschwindigkeit -</de>
+        </text>
+        <text name="configuration_valueWheelOriginalJD7810">
+            <en>Factory 20.8R38 / 16.9R28</en>
+            <de>Werksbereifung 20.8R38 / 16.9R28</de>
+        </text>
+        <text name="input_JD7810_LCD_A">
+            <en>LCD key A: engine rpm</en>
+            <de>LCD Taste A: Motordrehzahl</de>
+        </text>
+        <text name="input_JD7810_LCD_B">
+            <en>LCD key B: PTO rear / front</en>
+            <de>LCD Taste B: Zapfwelle hinten / vorne</de>
+        </text>
+        <text name="input_JD7810_LCD_C">
+            <en>LCD key C: wheel slip %</en>
+            <de>LCD Taste C: Schlupf %</de>
+        </text>
+        <text name="input_JD7810_LCD_D">
+            <en>LCD key D: true / calculated speed</en>
+            <de>LCD Taste D: Radar- / Rechengeschwindigkeit</de>
+        </text>
+        <text name="ic_jd7810_gsBright">
+            <en>GreenStar: Brightness</en>
+            <de>GreenStar: Brightness</de>
+        </text>
+        <text name="ic_jd7810_gsA">
+            <en>GreenStar: Key A</en>
+            <de>GreenStar: Key A</de>
+        </text>
+        <text name="ic_jd7810_gsB">
+            <en>GreenStar: Key B</en>
+            <de>GreenStar: Key B</de>
+        </text>
+        <text name="ic_jd7810_gsC">
+            <en>GreenStar: Key C</en>
+            <de>GreenStar: Key C</de>
+        </text>
+        <text name="ic_jd7810_gsD">
+            <en>GreenStar: Key D</en>
+            <de>GreenStar: Key D</de>
+        </text>
+        <text name="ic_jd7810_gsE">
+            <en>GreenStar: Key E</en>
+            <de>GreenStar: Key E</de>
+        </text>
+        <text name="ic_jd7810_gsF">
+            <en>GreenStar: Key F</en>
+            <de>GreenStar: Key F</de>
+        </text>
+        <text name="ic_jd7810_gsG">
+            <en>GreenStar: Key G</en>
+            <de>GreenStar: Key G</de>
+        </text>
+        <text name="ic_jd7810_gs1">
+            <en>GreenStar: Key 1</en>
+            <de>GreenStar: Key 1</de>
+        </text>
+        <text name="ic_jd7810_gs2">
+            <en>GreenStar: Key 2</en>
+            <de>GreenStar: Key 2</de>
+        </text>
+        <text name="ic_jd7810_gs3">
+            <en>GreenStar: Key 3</en>
+            <de>GreenStar: Key 3</de>
+        </text>
+        <text name="ic_jd7810_gs4">
+            <en>GreenStar: Key 4</en>
+            <de>GreenStar: Key 4</de>
+        </text>
+        <text name="ic_jd7810_gs5">
+            <en>GreenStar: Key 5</en>
+            <de>GreenStar: Key 5</de>
+        </text>
+        <text name="ic_jd7810_gs6">
+            <en>GreenStar: Key 6</en>
+            <de>GreenStar: Key 6</de>
+        </text>
+        <text name="ic_jd7810_gs7">
+            <en>GreenStar: Key 7</en>
+            <de>GreenStar: Key 7</de>
+        </text>
+        <text name="ic_jd7810_gs8">
+            <en>GreenStar: Key 8</en>
+            <de>GreenStar: Key 8</de>
+        </text>
+        <text name="ic_jd7810_gs9">
+            <en>GreenStar: Key 9</en>
+            <de>GreenStar: Key 9</de>
+        </text>
+        <text name="ic_jd7810_gsDot">
+            <en>GreenStar: Decimal point</en>
+            <de>GreenStar: Decimal point</de>
+        </text>
+        <text name="ic_jd7810_gs0">
+            <en>GreenStar: Key 0</en>
+            <de>GreenStar: Key 0</de>
+        </text>
+        <text name="ic_jd7810_gsClr">
+            <en>GreenStar: Clear</en>
+            <de>GreenStar: Clear</de>
+        </text>
+        <text name="ic_jd7810_gsPage">
+            <en>GreenStar: Page</en>
+            <de>GreenStar: Page</de>
+        </text>
+        <text name="ic_jd7810_gsSetup">
+            <en>GreenStar: Setup</en>
+            <de>GreenStar: Setup</de>
+        </text>
+        <text name="ic_jd7810_gsInfo">
+            <en>GreenStar: Info</en>
+            <de>GreenStar: Info</de>
+        </text>
+        <text name="ic_jd7810_gsRun">
+            <en>GreenStar: Run</en>
+            <de>GreenStar: Run</de>
+        </text>
+        <text name="input_JD7810_HMS_TOGGLE">
+            <en>HMS on / off (LAlt + H)</en>
+            <de>HMS ein / aus (LAlt + H)</de>
+        </text>
+        <text name="input_JD7810_PARK">
+            <en>Park lock on / off</en>
+            <de>Parksperre ein / aus</de>
+        </text>
+        <text name="input_JD7810_LIGHTS_DOWN">
+            <en>Lights back (high - low - position - off)</en>
+            <de>Licht zurueck (Fern - Abblend - Stand - aus)</de>
+        </text>
+        <text name="input_JD7810_WORK_LIGHTS">
+            <en>Work lights (front - rear - both - off)</en>
+            <de>Arbeitsscheinwerfer (vorne - hinten - beide - aus)</de>
+        </text>
+        <text name="input_JD7810_TYRE_UP">
+            <en>Tyre pressure + (hold to inflate)</en>
+            <de>Reifendruck + (halten)</de>
+        </text>
+        <text name="input_JD7810_TYRE_DOWN">
+            <en>Tyre pressure - (hold to deflate)</en>
+            <de>Reifendruck - (halten)</de>
+        </text>
+        <text name="input_JD7810_HMS_ALL">
+            <en>Both implements now (LAlt + V)</en>
+            <de>Beide Geräte sofort (LAlt + V)</de>
+        </text>
+        <text name="ic_jd7810_pmArea">
+            <en>Performance Monitor: Area</en>
+            <de>Performance Monitor: Area</de>
+        </text>
+        <text name="ic_jd7810_pmSlip">
+            <en>Performance Monitor: % slip</en>
+            <de>Performance Monitor: % slip</de>
+        </text>
+        <text name="ic_jd7810_pmWork">
+            <en>Performance Monitor: Work</en>
+            <de>Performance Monitor: Work</de>
+        </text>
+        <text name="ic_jd7810_pmSpeed">
+            <en>Performance Monitor: Speed</en>
+            <de>Performance Monitor: Speed</de>
+        </text>
+        <text name="ic_jd7810_pmWidth">
+            <en>Performance Monitor: Width</en>
+            <de>Performance Monitor: Width</de>
+        </text>
+        <text name="ic_jd7810_pmServ">
+            <en>Performance Monitor: Service</en>
+            <de>Performance Monitor: Service</de>
+        </text>
+        <text name="ic_jd7810_pmPto">
+            <en>Performance Monitor: PTO rpm</en>
+            <de>Performance Monitor: PTO rpm</de>
+        </text>
+        <text name="ic_jd7810_pmZero">
+            <en>Performance Monitor: ZERO</en>
+            <de>Performance Monitor: ZERO</de>
+        </text>
+        <text name="ic_jd7810_pmSet">
+            <en>Performance Monitor: SET</en>
+            <de>Performance Monitor: SET</de>
+        </text>
+        <text name="ic_jd7810_vSelNext">
+            <en>V selector: next (tractor / front / rear / both)</en>
+            <de>V-Wahlschalter: weiter</de>
+        </text>
+        <text name="ic_jd7810_vSel1">
+            <en>V selector: tractor</en>
+            <de>V-Wahlschalter: Traktor</de>
+        </text>
+        <text name="ic_jd7810_vSel2">
+            <en>V selector: front implement</en>
+            <de>V-Wahlschalter: Frontgerät</de>
+        </text>
+        <text name="ic_jd7810_vSel3">
+            <en>V selector: rear implement</en>
+            <de>V-Wahlschalter: Heckgerät</de>
+        </text>
+        <text name="ic_jd7810_vSel4">
+            <en>V selector: both implements</en>
+            <de>V-Wahlschalter: beide Geräte</de>
+        </text>
+        <text name="configuration_condition">
+            <en>Condition</en>
+            <de>Zustand</de>
+        </text>
+        <text name="condition_maintained">
+            <en>Well maintained</en>
+            <de>Gepflegt</de>
+        </text>
+    </l10n>
+
+    <storeItems>
+        <storeItem xmlFilename="series7810.xml"/>
+    </storeItems>
+</modDesc>

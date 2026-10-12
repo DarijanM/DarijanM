@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="tractor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>7810 "The Legend"</name>
+        <specs>
+            <power>175</power>
+            <maxSpeed>40</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_tractor</function>
+            <function>$l10n_function_tractorFrontloader</function>
+        </functions>
+        <image>store_series7810.png</image>
+        <price>68000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JOHNDEERE</brand>
+        <category>tractorsM</category>
+        <shopTranslationOffset>0 0.056 0</shopTranslationOffset>
+        <shopRotationOffset>1.216 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>3411712</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1506048</indexBufferMemoryUsage>
+        <textureMemoryUsage>5963776</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>553938</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+        <filename>series7810_ivt.i3d</filename>
+        <sounds filename="sounds/series7810.xml"/>
+        <size width="2.65" length="4.6" height="3.15" lengthOffset="0.15"/>
+        <components>
+            <component centerOfMass="0 0.9 0.05" solverIterationCount="28" mass="4450"/>
+            <component centerOfMass="0 0 0" solverIterationCount="15" mass="1000"/>
+            <joint component1="1" component2="2" node="componentJointAxleFront" rotLimit="0 0 8.8" rotLimitSpring="0 0 500" rotLimitDamping="0 0 100" maxRotDriveForce="0 0 20" rotDriveRotation="0 0 0" rotDriveSpring="0 0 15" rotDriveDamping="0 0 20" transLimit="0 0 0" transLimitSpring="0 2000 0" transLimitDamping="0 75 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="VEHICLE"/>
+        <mapHotspot type="TRACTOR"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations tireCategories="TRACTOR">
+            <wheelConfiguration name="$l10n_configuration_valueDefault" saveId="DEFAULT" numDynamicConfigurations="1">
+                <wheels autoRotateBackSpeed="2.3">
+                    <wheel dimensions="540_65R30" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.8" repr="wheelFrontLeftReprPhys"  driveNode="wheelFrontLeft"  forcePointRatio="1.0" initialCompression="25" suspTravel="0.07" spring="50" damper="30" transRatio="0" xOffset="-0.02" yOffset="0.035"/>
+                        <steering node="steeringBarCenter" nodeMinTransX="0.097" nodeMaxTransX="-0.097"/>
+                        <innerRim filename="$data/shared/wheels/rims/rim006.i3d" node="1|0"/>
+                    </wheel>
+                    <wheel dimensions="540_65R30" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.8" repr="wheelFrontRightReprPhys" driveNode="wheelFrontRight" forcePointRatio="1.0" initialCompression="25" suspTravel="0.07" spring="50" damper="30" transRatio="0" xOffset="-0.02" yOffset="0.035"/>
+                        <innerRim filename="$data/shared/wheels/rims/rim006.i3d" node="1|1"/>
+                    </wheel>
+                    <wheel dimensions="650_65R42" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.8" repr="wheelBackLeft"  forcePointRatio="1.0" initialCompression="22" suspTravel="0.12" spring="31" damper="30" xOffset="-0.01" yOffset="0.04"/>
+                        <innerRim filename="$data/shared/wheels/rims/rim008.i3d" node="1|0" widthAndDiam="18 43"/>
+                    </wheel>
+                    <wheel dimensions="650_65R42" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="1.8" repr="wheelBackRight" forcePointRatio="1.0" initialCompression="22" suspTravel="0.12" spring="31" damper="30" xOffset="-0.01" yOffset="0.04"/>
+                        <innerRim filename="$data/shared/wheels/rims/rim008.i3d" node="1|1" widthAndDiam="18 43"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="5000" saveId="WEIGHTS" numDynamicConfigurations="1">
+                <wheels baseConfig="DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <additional filename="$data/shared/wheels/weights/weight005.i3d" node="3|0" offset="-0.015" scale="1 1.06 1.06" mass="0.6"/>
+                    </wheel>
+                    <wheel>
+                        <additional filename="$data/shared/wheels/weights/weight005.i3d" node="3|1" offset="-0.015" scale="1 1.06 1.06" mass="0.6"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" saveId="BROAD" numDynamicConfigurations="1">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="600_60R30">
+                        <physics xOffset="-0.01"/>
+                    </wheel>
+                    <wheel dimensions="600_60R30">
+                        <physics xOffset="-0.01"/>
+                    </wheel>
+                    <wheel dimensions="710_60R42"/>
+                    <wheel dimensions="710_60R42"/>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="7000" saveId="BROAD_WEIGHTS" numDynamicConfigurations="1">
+                <wheels baseConfig="BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <additional filename="$data/shared/wheels/weights/weight005.i3d" node="3|0" offset="-0.015" scale="1 1.06 1.06" mass="0.6"/>
+                    </wheel>
+                    <wheel>
+                        <additional filename="$data/shared/wheels/weights/weight005.i3d" node="3|1" offset="-0.015" scale="1 1.06 1.06" mass="0.6"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <!-- tvornicke gume JD 7810 (1997.-2003.): straga 20.8R38, sprijeda 16.9R28 (Michelin AgriBib u igri) -->
+            <wheelConfiguration name="$l10n_configuration_valueWheelOriginalJD7810" price="0" saveId="ORIGINAL_1997" numDynamicConfigurations="1" isDefault="true">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="16_9R28">
+                        <innerRim widthAndDiam="15 29"/>
+                    </wheel>
+                    <wheel dimensions="16_9R28">
+                        <innerRim widthAndDiam="15 29"/>
+                    </wheel>
+                    <wheel dimensions="20_8R38">
+                        <innerRim widthAndDiam="18 39"/>
+                    </wheel>
+                    <wheel dimensions="20_8R38">
+                        <innerRim widthAndDiam="18 39"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow1500mm" price="1000" saveId="NARROW_1500" numDynamicConfigurations="1">
+                <wheels baseConfig="DEFAULT" isCareWheelConfiguration="true" ackermannSteeringIndex="2">
+                    <wheel dimensions="12_4R38" rimOffset="-0.2445">
+                        <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|1"/>
+                    </wheel>
+                    <wheel dimensions="12_4R38" rimOffset="-0.2445">
+                        <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|0"/>
+                    </wheel>
+                    <wheel dimensions="380_90R50_rc" rimOffset="-0.1465">
+                        <innerRim widthAndDiam="12 50"/>
+                    </wheel>
+                    <wheel dimensions="380_90R50_rc" rimOffset="-0.1465">
+                        <innerRim widthAndDiam="12 50"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelFrontLeftFender"  visibilityActive="false"/>
+                <objectChange node="wheelFrontRightFender" visibilityActive="false"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" saveId="NARROW" numDynamicConfigurations="1">
+                <wheels baseConfig="DEFAULT" isCareWheelConfiguration="true">
+                    <wheel dimensions="420_85R30"/>
+                    <wheel dimensions="420_85R30"/>
+                    <wheel dimensions="480_80R46">
+                        <innerRim widthAndDiam="16 47.5"/>
+                    </wheel>
+                    <wheel dimensions="480_80R46">
+                        <innerRim widthAndDiam="16 47.5"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBackNarrow" price="3000" saveId="TWIN_BACK_NARROW" numDynamicConfigurations="1">
+                <wheels baseConfig="NARROW">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsNarrow" price="6000" saveId="TWIN_ALL_NARROW" numDynamicConfigurations="1">
+                <wheels baseConfig="NARROW">
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.02 1.02"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.02 1.02"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="5000" saveId="TWIN_BACK" numDynamicConfigurations="1">
+            <tireCombination brand="NOKIAN" names="-"/>
+                <wheels baseConfig="DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="8000" saveId="TWIN_ALL" numDynamicConfigurations="1">
+            <tireCombination brand="NOKIAN" names="-"/>
+                <wheels baseConfig="DEFAULT">
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.04 1.04"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" price="1000" saveId="COMMUNAL" tireCategories="TRACTOR_COMMUNAL" numDynamicConfigurations="1">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="540_65R30"/>
+                    <wheel dimensions="540_65R30"/>
+                    <wheel dimensions="650_65R42"/>
+                    <wheel dimensions="650_65R42"/>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="40" rotMax="35" rotCenterWheel1="3" rotCenterWheel2="4"/>
+            <ackermannSteering rotSpeed="40" rotMax="31" rotCenterWheel1="3" rotCenterWheel2="4"/>
+        </ackermannSteeringConfigurations>
+
+        <rimMaterial materialTemplateName="JOHNDEERE_YELLOW1"/>
+        <hubMaterial materialTemplateName="JOHNDEERE_YELLOW1"/>
+
+        <hubs>
+            <hub linkNode="wheelFrontLeft" filename="$data/shared/wheels/hubs/hub_n10_2.xml" isLeft="true" scale="0.3 0.3 0.3"/>
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n10_2.xml" isLeft="false" scale="0.3 0.3 0.3"/>
+            <hub linkNode="wheelBackLeftHub" filename="$data/shared/wheels/hubs/hub_n10_9.xml" isLeft="true" scale="0.3 0.3 0.3" offset="0.15"/>
+            <hub linkNode="wheelBackRightHub" filename="$data/shared/wheels/hubs/hub_n10_9.xml" isLeft="false" scale="0.3 0.3 0.3" offset="0.15"/>
+        </hubs>
+    </wheels>
+
+    <lights>
+        <!-- v180: F = 0 pozicijska (+ straznja, tablica, ploca) -> 0 4 kratka -> 0 4 3 duga -> off.
+             Radna (1 straznja, 2 prednja) su odvojena: Shift+F (JD7810Engine.lua). 4 = vlastiti tip (kratka). -->
+        <states>
+            <state lightTypes="0"/>
+            <state lightTypes="0 4"/>
+            <state lightTypes="0 4 3"/>
+            <automaticState lightTypes="0 4" lightTypesWork="0 4 1 2"/>
+        </states>
+
+        <sharedLight linkNode="plateNumberLight01Left"  filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml"/>
+        <sharedLight linkNode="plateNumberLight01Right" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml"/>
+
+        <realLights>
+            <low>
+                <light node="frontLightLow" lightTypes="4" excludedLightTypes="2 3"/>
+                <light node="workLightBackLow" lightTypes="1"/>
+                <light node="workLightFrontLow" lightTypes="2"/>
+                <light node="highBeamLow" lightTypes="3"/>
+            </low>
+            <high>
+                <light node="frontLightHighBottom" lightTypes="4" excludedLightTypes="2 3" isBottomLight="true"/>
+                <light node="frontLightHighTop" lightTypes="4" excludedLightTypes="2 3" isTopLight="true"/>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <light node="licensePlateLightHigh" lightTypes="0"/>
+                <light node="workLightBackHigh" lightTypes="1"/>
+                <light node="workLightFrontHigh" lightTypes="2"/>
+                <light node="highBeamHighBottom" lightTypes="3" isBottomLight="true"/>
+                <light node="highBeamHighTop" lightTypes="3" isTopLight="true"/>
+                <brakeLight node="backLightsHigh"/>
+                <turnLightLeft node="turnLightLeftFront"/>
+                <turnLightRight node="turnLightRightFront"/>
+            </high>
+        </realLights>
+
+        <staticLightCompounds>
+            <staticLightCompound>
+                <node node="defaultLights" intensity="5"/>
+                <node node="defaultLightsGlass02" intensity="1"/>
+            </staticLightCompound>
+        </staticLightCompounds>
+
+        <!-- v181: male pozicijske lampe ispred retrovizora (0>0|2|1|1 defaultLightsGlass01, Darijan) izvan compounda: svijetle na prvom F (tip 0) -->
+        <defaultLights>
+            <defaultLight node="defaultLightsGlass01" lightTypes="0" intensity="1"/>
+        </defaultLights>
+
+        <beaconLights>
+            <beaconLight node="beaconLightLeft" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+            <beaconLight node="beaconLightRight" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+        </beaconLights>
+
+        <dashboards>
+            <!-- JD7810: svjetleci tisak (pali se sa svjetlima) -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="interiorGlow01_decals" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="interiorGlow02_decals" intensity="0.1" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="steeringConsole_decals01" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="steeringConsole_decals02" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="needleSpeedPart" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="needleRPMPart" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="needleAirPart" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="needleBoostPart" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="lampHighbeam_decals" intensity="0.2" lightTypes="3" baseColor="SHARED_BLACK3" emitColor="BLUE" groups="MOTOR_ACTIVE"/>
+
+            <dashboard displayType="EMITTER" valueType="turnLightLeft" node="lampTurnlightLeft_decals" intensity="0.2" baseColor="SHARED_BLACK3" emitColor="GREEN"/>
+            <dashboard displayType="EMITTER" valueType="turnLightRight" node="lampTurnlightRight_decals" intensity="0.2" baseColor="SHARED_BLACK3" emitColor="GREEN"/>
+            <dashboard displayType="EMITTER" valueType="turnLightHazard" node="lampHazardlights_decals" intensity="0.2" baseColor="SHARED_BLACK3" emitColor="GREEN"/>
+            <dashboard displayType="EMITTER" valueType="turnLightAny" node="lampTurnlightAttacherFront_decals" intensity="0.2" baseColor="SHARED_BLACK3" emitColor="GREEN" groups="MOTOR_ACTIVE FRONT_ATTACHMENT"/>
+            <dashboard displayType="EMITTER" valueType="turnLightAny" node="lampTurnlightAttacherBack01_decals" intensity="0.2" baseColor="SHARED_BLACK3" emitColor="GREEN" groups="MOTOR_ACTIVE BACK_ATTACHMENT"/>
+            <dashboard displayType="ROT"     valueType="turnLight" node="leverTurnlight" minRot="0 20 0" maxRot="0 -20 0" doInterpolation="true"/>
+
+            <dashboard displayType="EMITTER" valueType="beaconLight" node="switchBeaconlight_decals" intensity="0.2" groups="MOTOR_ACTIVE"/>
+            <!-- IVT: narancasti indikator na MFWD prekidacu svijetli kad su svjetla ukljucena -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="mfwdIndicatorIVT" intensity="0.3" lightTypes="0" baseColor="0.22 0.09 0.02" emitColor="1 0.42 0.05" groups="MOTOR_ACTIVE"/>
+            <!-- HMS klackalica: slova F / B / R svijetle kad su svjetla ukljucena -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="hmsLettersGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="acIconGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="ivtSpeedWheelGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="ivtGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="panelsGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="hitchFLowerGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="hitchFRaiseGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="aqBtnDownGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="aqBtnUpGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="aqAutoEcoGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="mfwdIconGlowAQ" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="mfwdIconGlowPS" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="mfwdIconGlowIVT" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="rearWiperIconGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="hvacScalesGlowBlue" intensity="0.25" lightTypes="0" baseColor="0.05 0.25 0.62" emitColor="0.25 0.55 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="hvacScalesGlowRed" intensity="0.25" lightTypes="0" baseColor="0.62 0.06 0.03" emitColor="1 0.15 0.05" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="ivtPanelGlowRed" intensity="0.25" lightTypes="0" baseColor="0.62 0.06 0.03" emitColor="1 0.15 0.05" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="aqPlateGlowRed" intensity="0.25" lightTypes="0" baseColor="0.62 0.06 0.03" emitColor="1 0.15 0.05" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="aqPlateGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="psPlateGlow" intensity="0.25" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <!-- Performance Monitor: bijelo pozadinsko svjetlo LCD-a (kao ostali instrumenti u kabini) kad su svjetla ukljucena -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmLCD" intensity="0.30" lightTypes="0" baseColor="0.56 0.57 0.52" emitColor="0.95 0.97 1" groups="MOTOR_ACTIVE"/>
+            <!-- Performance Monitor tipkovnica (v89): danju boja tiska (baseColor), nocu svijetli s LCD-om: okviri zeleno/narancasto/bijelo, LCD okviri, natpisi i ikone bijelo, brojevi i SET/SAVE/CANCEL zuto -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmLabels" intensity="0.30" lightTypes="0" baseColor="0.05 0.52 0.10" emitColor="0.10 0.90 0.20" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmGlowO" intensity="0.30" lightTypes="0" baseColor="0.81 0.39 0.05" emitColor="1 0.55 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmGlowW" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmGlowB" intensity="0.30" lightTypes="0" baseColor="0.07 0.39 0.81" emitColor="0.15 0.55 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey01W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey01Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey02W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey02Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey03W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey03Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey04W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey04Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey05W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey05Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey06W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey06Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey07W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey07Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey08W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey08Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey09W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey09Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey10W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey10Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey11W" intensity="0.30" lightTypes="0" baseColor="0.85 0.85 0.85" emitColor="1 1 1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey11Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="pmKey12Y" intensity="0.30" lightTypes="0" baseColor="0.89 0.66 0.04" emitColor="1 0.80 0.10" groups="MOTOR_ACTIVE"/>
+            <!-- Agro GSM: zuto-zeleno LED pozadinsko svjetlo (kao mobiteli s kraja 90-ih) kad su svjetla ukljucena -->
+            <dashboard displayType="EMITTER" valueType="lightState" node="gsmLCD" intensity="0.30" lightTypes="0" baseColor="0.56 0.57 0.52" emitColor="0.32 0.72 0.14" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="driveShaftLeftInner" wheelNodes="wheelFrontLeft" wheelScale="8"/>
+        <speedRotatingPart node="driveShaftLeftOuter" wheelNodes="wheelFrontLeft" wheelScale="8"/>
+        <speedRotatingPart node="driveShaftRightInner" wheelNodes="wheelFrontRight" wheelScale="8"/>
+        <speedRotatingPart node="driveShaftRightOuter" wheelNodes="wheelFrontRight" wheelScale="8"/>
+        <speedRotatingPart node="wheelFrontLeftPart" wheelNodes="wheelFrontLeft"/>
+        <speedRotatingPart node="wheelFrontRightPart" wheelNodes="wheelFrontRight"/>
+    </speedRotatingParts>
+
+    <attacherJoints comboDuration="2">
+        <attacherJoint node="attacherJointFront" lowerRotationOffset="-1.22" upperRotationOffset="-1.22" moveTime="2.5" comboTime="0" rotLimitSpring="0 0 485" transLimitSpring="0 485 0">
+            <distanceToGround lower="0.31" upper="1.10"/>
+            <rotationNode node="attacherJointFrontRot" lowerRotation="16 0 0" upperRotation="-36 0 0"/>
+            <rotationNode2 node="attacherJointFrontRot2"/>
+            <bottomArm rotationNode="attacherJointFrontArmBottom" translationNode="attacherJointFrontArmBottomTrans" referenceNode="referencePointFrontBottom" zScale="1" startRotation="-27 0 0" categoryRange="2"/>
+            <topArm baseNode="attacherJointFrontArmTop" filename="$data/shared/assets/upperLinks/walterscheidSO_65_460.xml" zScale="1" materialTemplateName="JOHNDEERE_GREEN1" toggleVisibility="true" useBrandDecal="false"/>
+            <dependentComponentJoint index="1" referenceMass="1" transSpringFactor="2" transDampingFactor="2" attachInterpolationTime="0.25" detachInterpolationTime="0.25"/>
+            <schema position="1 0" rotation="0" invertX="true"/>
+            <objectChange node="lowerLinkFrontLeft_lod" rotationActive="0 0 0" rotationInactive="70 0 0"/>
+            <objectChange node="lowerLinkFrontRight_lod" rotationActive="0 0 0" rotationInactive="70 0 0"/>
+        </attacherJoint>
+
+        <!-- rotLimitSpring/transLimitSpring (kao FD 7010): meke granice njihanja donjih poluga - prikljucak se ljulja u voznji; granice ostaju zadane igre (20 st., 0,5 m) -->
+        <attacherJoint node="attacherJointBack" lowerRotationOffset="1.22" upperRotationOffset="1.22" moveTime="2.5" comboTime="1" rotLimitSpring="0 0 628" transLimitSpring="0 628 0">
+            <distanceToGround lower="0.30" upper="1.27"/>
+            <rotationNode node="attacherJointBackRot" upperRotation="31 0 0" lowerRotation="-21 0 0"/>
+            <rotationNode2 node="attacherJointBackRot2"/>
+            <bottomArm rotationNode="attacherJointBackArmBottom" translationNode="attacherJointBackArmBottomTrans" referenceNode="referencePointBackBottom" zScale="-1" startRotation="-13 0 0" categoryRange="1 3" defaultCategory="3">
+                <armLeft node="attacherJointBackArmBottomLeft" referenceNode="attacherJointBackArmBottomLeftRef"/>
+                <armRight node="attacherJointBackArmBottomRight" referenceNode="attacherJointBackArmBottomRightRef"/>
+            </bottomArm>
+            <topArm baseNode="attacherJointBackArmTop" filename="$data/shared/assets/upperLinks/walterscheidHO_90_600.xml" zScale="-1" materialTemplateName="JOHNDEERE_GREEN1" useBrandDecal="false"/>
+            <schema position="1 0" rotation="0" invertX="false"/>
+            <visuals hide="trailerAttacherLowBack trailerAttacherBack"/>
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointFront" jointType="trailer" lowerRotLimit="25 55 50" allowsJointLimitMovement="false" comboTime="0">
+            <schema position="1 0" rotation="0" invertX="true"/>
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 57 50" allowsJointLimitMovement="false" comboTime="1">
+            <distanceToGround lower="0.63" upper="1.15"/>
+            <transNode node="trailerAttacherBack" minY="0.54" maxY="1.06" height="0.25">
+                <dependentBottomArm node="attacherJointBackArmBottom" threshold="0.65" rotation="30 0 0"/>
+            </transNode>
+            <schema position="1 0" rotation="0" invertX="false"/>
+            <visuals nodes="trailerAttacherBack" hide="trailerAttacherLowBack"/>
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointBackLow" jointType="trailerLow" lowerRotLimit="25 54 50" lowerTransLimit="0 0 0" allowsJointLimitMovement="false" comboTime="1">
+            <distanceToGround lower="0.62" upper="1.09"/>
+            <transNode node="trailerAttacherLowBack" minY="0.53" maxY="1.0">
+                <dependentBottomArm node="attacherJointBackArmBottom" threshold="0.65" rotation="30 0 0"/>
+            </transNode>
+            <schema position="1 0" rotation="0" invertX="false"/>
+            <visuals nodes="trailerAttacherLowBack" hide="trailerAttacherBack"/>
+            <steeringBars leftNode="trailerSteeringLeftRef" rightNode="trailerSteeringRightRef"/>
+        </attacherJoint>
+    </attacherJoints>
+
+    <frontloaderConfigurations>
+        <frontloaderConfiguration name="$l10n_ui_no" price="0">
+            <objectChange node="leverFrontloader" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="leverFrontloaderRubber" visibilityActive="false" visibilityInactive="true"/>
+            <!-- IVT konzola: okrugli poklopac na mjestu dzojstika kad nema utovarivaca -->
+            <objectChange node="consoleIVT_joyCover" visibilityActive="true" visibilityInactive="false"/>
+        </frontloaderConfiguration>
+
+        <frontloaderConfiguration name="Quicke" price="1500" displayBrand="QUICKE">
+            <attacherJoint node="attacherJointFrontloaderQuicke" jointType="attachableFrontloader" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" moveTime="2">
+                <dependentComponentJoint index="1" referenceMass="1" transSpringFactor="2" transDampingFactor="2" attachInterpolationTime="0.25" detachInterpolationTime="0.25"/>
+                <schema position="0.8 0" rotation="0" invertX="true"/>
+            </attacherJoint>
+            <objectChange node="quickeFrontloaderConsole" visibilityActive="true" visibilityInactive="false"/>
+        </frontloaderConfiguration>
+
+        <frontloaderConfiguration name="Hauer" price="1500" displayBrand="HAUER">
+            <attacherJoint node="attacherJointFrontloaderHauer" jointType="attachableFrontloader" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" moveTime="2">
+                <dependentComponentJoint index="1" referenceMass="1" transSpringFactor="2" transDampingFactor="2" attachInterpolationTime="0.25" detachInterpolationTime="0.25"/>
+                <schema position="0.8 0" rotation="0" invertX="true"/>
+            </attacherJoint>
+            <objectChange node="hauerFrontloaderConsole" visibilityActive="true" visibilityInactive="false"/>
+        </frontloaderConfiguration>
+    </frontloaderConfigurations>
+
+    <connectionHoses>
+        <target attacherJointIndices="1 3" type="hydraulicIn" node="hydraulicFrontIn01" socket="hydraulic03"/>
+        <target attacherJointIndices="1 3" type="hydraulicOut" node="hydraulicFrontOut01" socket="hydraulic03"/>
+
+        <target attacherJointIndices="2 4 5" type="hydraulicIn" node="hydraulicBackIn01">
+            <objectChange node="hydraulicBackIn01Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicOut" node="hydraulicBackOut01">
+            <objectChange node="hydraulicBackOut01Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicIn" node="hydraulicBackIn02">
+            <objectChange node="hydraulicBackIn02Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicOut" node="hydraulicBackOut02">
+            <objectChange node="hydraulicBackOut02Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicIn" node="hydraulicBackIn03">
+            <objectChange node="hydraulicBackIn03Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicOut" node="hydraulicBackOut03">
+            <objectChange node="hydraulicBackOut03Cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicIn" node="hydraulicBackIn04">
+            <objectChange node="hydraulicBackIn04Cover" visibilityActive="false" visibilityInactive="true"/>
+        </target>
+        <target attacherJointIndices="2 4 5" type="hydraulicOut" node="hydraulicBackOut04">
+            <objectChange node="hydraulicBackOut04Cover" visibilityActive="false" visibilityInactive="true"/>
+        </target>
+
+        <target attacherJointIndices="1 3" type="electric" node="electricFront" socket="electric"/>
+        <target attacherJointIndices="2 4 5" type="electric" node="electricBack" socket="electric"/>
+
+        <target attacherJointIndices="2 4 5" type="airDoubleRed" node="airDoubleRed" socket="air_red"/>
+        <target attacherJointIndices="2 4 5" type="airDoubleYellow" node="airDoubleYellow" socket="air_yellow"/>
+
+        <toolConnectorHose mountingNode="rightPipe">
+            <startTarget attacherJointIndices="1 3" type="TOOL_CONNECTOR_TOP_RIGHT" node="rightPipe_frontConnector"/>
+            <endTarget attacherJointIndices="2 4 5" type="TOOL_CONNECTOR_TOP_RIGHT" node="rightPipe_backConnector" straighteningFactor="3"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe01">
+            <startTarget attacherJointIndices="1 3" type="TOOL_CONNECTOR_BOTTOM_01" node="bottomPipe01_frontConnector"/>
+            <endTarget attacherJointIndices="2 4 5" type="TOOL_CONNECTOR_BOTTOM_01" node="bottomPipe01_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe02">
+            <startTarget attacherJointIndices="1 3" type="TOOL_CONNECTOR_BOTTOM_02" node="bottomPipe02_frontConnector"/>
+            <endTarget attacherJointIndices="2 4 5" type="TOOL_CONNECTOR_BOTTOM_02" node="bottomPipe02_backConnector"/>
+        </toolConnectorHose>
+
+       <toolConnectorHose mountingNode="bottomPipe03">
+            <startTarget attacherJointIndices="1 3" type="TOOL_CONNECTOR_BOTTOM_03" node="bottomPipe03_frontConnector"/>
+            <endTarget attacherJointIndices="2 4 5" type="TOOL_CONNECTOR_BOTTOM_03" node="bottomPipe03_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe04">
+            <startTarget attacherJointIndices="1 3" type="TOOL_CONNECTOR_BOTTOM_04" node="bottomPipe04_frontConnector"/>
+            <endTarget attacherJointIndices="2 4 5" type="TOOL_CONNECTOR_BOTTOM_04" node="bottomPipe04_backConnector"/>
+        </toolConnectorHose>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <output outputNode="ptoOutputFront" attacherJointIndices="1 3"/>
+        <output outputNode="ptoOutputBack" attacherJointIndices="2 4 5"/>
+    </powerTakeOffs>
+
+    <enterable>
+        <exitPoint node="exitPoint"/>
+        <enterReferenceNode node="series7810_main_component1"/>
+
+        <cameras>
+            <camera node="outdoorCamera" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="3.8" transMax="40" translation="0 0 6.3" rotation="-20 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+            </camera>
+            <!-- pogled vozaca: glava 5 cm nize (i3d y 2.80686 -> 2.75686), pogled 3 st. nize (-20 -> -23); fov 45 unutra i vani (i3d + jd7810Settings <camera>) -->
+            <camera node="indoorCamera" translation="0 2.75686 -0.764355" rotation="-23 180 0" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="1"/>
+        </cameras>
+
+        <characterNode node="playerSkin" cameraMinDistance="0.5">
+            <target ikChain="leftArm" targetNode="playerLeftHandTarget" poseId="narrowFingers"/>
+            <target ikChain="rightArm" targetNode="playerRightHandTarget" poseId="narrowFingers"/>
+            <target ikChain="leftFoot" targetNode="playerLeftFootTarget"/>
+            <target ikChain="rightFoot" targetNode="playerRightFootTarget"/>
+        </characterNode>
+
+        <characterTargetNodeModifier node="playerRightHandTarget" transitionTime="0.2">
+            <state node="playerRightHandTargetFrontloader" referenceNode="leverFrontloader" poseId="narrowFingers"/>
+        </characterTargetNodeModifier>
+
+        <characterTargetNodeModifier node="playerLeftFootTarget" transitionTime="0.2">
+            <state node="playerRightFootTargetClutch" referenceNode="pedalClutch"/>
+        </characterTargetNodeModifier>
+
+        <characterTargetNodeModifier node="playerRightFootTarget" transitionTime="0.2">
+            <state node="playerRightFootTargetGas" referenceNode="pedalGas" directionReferenceNode="playerRightFootTargetGasRef"/>
+            <state node="playerRightFootTargetBrake" referenceNode="pedalBrake"/>
+        </characterTargetNodeModifier>
+
+        <mirrors>
+            <mirror node="mirrorLeftTop" prio="1"/>
+            <mirror node="mirrorRightTop" prio="1"/>
+            <mirror node="mirrorLeftBottom" prio="2"/>
+            <mirror node="mirrorRightBottom" prio="2"/>
+            <mirror node="mirrorInterior" prio="2"/>
+        </mirrors>
+
+        <dashboards>
+            <dashboard displayType="TEXT" valueType="time" node="numbersTime" textColor="0 0 0 1" textSize="0.015" textMask="00:00"   font="DIGIT" textAlignment="CENTER" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="operatingTime" node="numbersOperatingTime" textColor="0 0 0 1" textSize="0.010" textMask="00000.0" font="DIGIT" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </enterable>
+
+    <suspensions>
+        <suspension node="seat" weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4" startTranslationOffset="0 -0.05 0"/>
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1"/>
+    </suspensions>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="36" fillType="diesel"/> <!-- l/h pri punom teretu; Nebraska 1728/1729/1807: 34,4-36,7 l/h pri najvecoj snazi (bilo 70) -->
+                <consumer fillUnitIndex="2" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5"/> <!-- usage per second at full brake power -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.50" wheelIndex1="1" wheelIndex2="2"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.55" wheelIndex1="3" wheelIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.25" differentialIndex1="1" differentialIndex2="2"/>
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+           <!-- v173 redoslijed i cijene (Darijan 9.10.; stari savegameovi nebitni): PowrQuad = osnovna (0), AQ +5000, AQ 50 +7000, PS +10000, IVT +20000, IVT 50 +25000 -->
+           <!-- JD 7810 PowrQuad 20F/20R: ista mehanika kao AutoQuad II (rasponi A-E x 4 stupnja), stupnjevi 1-4 samo rucno (bez AUTO/ECO).
+                ODSTUPANJE: pravi PowrQuad ima posebnu polugu za 1-4; ovdje AQ konzola (prekidac AUTO/ECO bez funkcije). -->
+           <motorConfiguration name="7810 PowrQuad 20/20" hp="175" price="0">
+                <!-- rotInertia 0.0013 (~default): manja inercija = manji "udarac" pri prebacivanju na nizu brzinu -->
+                <!-- dampingRateScale 0.9: jace kocenje motorom nakon prebacivanja na nizu brzinu -->
+                <!-- maxRpm 2300: rezerva za prekoracenje okretaja (regulator reze gorivo iznad 2200), manje naglog "hvatanja" pri prebacivanju na nizu brzinu -->
+                <!-- accelerationLimit: max. ubrzanje u m/s2 (default 2.0). Manje = mirnije ubrzavanje bez tereta -->
+                <!-- ptoMotorRpmRatio 3.89: 540 o/min PTO pri 2100 o/min motora (kao original) -->
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="40" maxBackwardSpeed="20" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- AutoQuad II kao u GIANTS konvenciji (JD 3650 u igri): GRUPE 1-4 = powershift bez spojke (changeTime 0),
+                     BRZINE A-E = rasponi sa spojkom (gearChangeTime 0.8 s = hod rucice po kulisi).
+                     OMAR206904 "Ground Speeds-20-Speed AutoQuad II", gume 20.8R38 @2100, ovdje x2300/2100:
+                     brzina = raspon X4; grupa = X1..X4 / X4 (E1-E4 22.7/27.3/32.7/40.0) -->
+                <transmission autoGearChangeTime="0.8" gearChangeTime="0.8" name="$l10n_info_transmission_manualWithPowerShiftGroups">
+                    <directionChange changeTime="0.3"/>
+                    <groups type="POWERSHIFT" changeTime="0">
+                        <group ratio="0.5675" name="1"/>
+                        <group ratio="0.6825" name="2"/>
+                        <group ratio="0.8175" name="3"/>
+                        <group ratio="1.0000" name="4" isDefault="true"/>
+                    </groups>
+                    <forwardGear maxSpeed="4.71" name="A" reverseName="A-R"/>
+                    <forwardGear maxSpeed="10.08" name="B" reverseName="B-R"/>
+                    <forwardGear maxSpeed="15.99" name="C" reverseName="C-R"/>
+                    <forwardGear maxSpeed="29.57" name="D" reverseName="D-R"/>
+                    <forwardGear maxSpeed="43.81" name="E" reverseName="E-R"/>
+                </transmission>
+                <!-- JD7810 AQ: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="creeperBase" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="creeperCover" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="consoleAutoQuad" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+           <!-- JD 7810 (1997-2003): 8.1L 6-cyl, 175 KS @ 2100 o/min, 785 Nm @ 1400 o/min, AutoQuad II 20F/20R (grupe A-E + powershift 1-4; nacin AUTOMATSKI = sve auto, RUCNO = grupe ti / 1-4 auto) -->
+           <motorConfiguration name="7810 AutoQuad II 20/20" hp="175" price="5000">
+                <!-- rotInertia 0.0013 (~default): manja inercija = manji "udarac" pri prebacivanju na nizu brzinu -->
+                <!-- dampingRateScale 0.9: jace kocenje motorom nakon prebacivanja na nizu brzinu -->
+                <!-- maxRpm 2300: rezerva za prekoracenje okretaja (regulator reze gorivo iznad 2200), manje naglog "hvatanja" pri prebacivanju na nizu brzinu -->
+                <!-- accelerationLimit: max. ubrzanje u m/s2 (default 2.0). Manje = mirnije ubrzavanje bez tereta -->
+                <!-- ptoMotorRpmRatio 3.89: 540 o/min PTO pri 2100 o/min motora (kao original) -->
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="40" maxBackwardSpeed="20" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- AutoQuad II kao u GIANTS konvenciji (JD 3650 u igri): GRUPE 1-4 = powershift bez spojke (changeTime 0),
+                     BRZINE A-E = rasponi sa spojkom (gearChangeTime 0.8 s = hod rucice po kulisi).
+                     OMAR206904 "Ground Speeds-20-Speed AutoQuad II", gume 20.8R38 @2100, ovdje x2300/2100:
+                     brzina = raspon X4; grupa = X1..X4 / X4 (E1-E4 22.7/27.3/32.7/40.0) -->
+                <transmission autoGearChangeTime="0.8" gearChangeTime="0.8" name="$l10n_info_transmission_manualWithPowerShiftGroups">
+                    <directionChange changeTime="0.3"/>
+                    <groups type="POWERSHIFT" changeTime="0">
+                        <group ratio="0.5675" name="1"/>
+                        <group ratio="0.6825" name="2"/>
+                        <group ratio="0.8175" name="3"/>
+                        <group ratio="1.0000" name="4" isDefault="true"/>
+                    </groups>
+                    <forwardGear maxSpeed="4.71" name="A" reverseName="A-R"/>
+                    <forwardGear maxSpeed="10.08" name="B" reverseName="B-R"/>
+                    <forwardGear maxSpeed="15.99" name="C" reverseName="C-R"/>
+                    <forwardGear maxSpeed="29.57" name="D" reverseName="D-R"/>
+                    <forwardGear maxSpeed="43.81" name="E" reverseName="E-R"/>
+                </transmission>
+                <!-- JD7810 AQ: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="creeperBase" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="creeperCover" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="consoleAutoQuad" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+
+           <!-- JD 7810 AutoQuad II 50 km/h (od 7/2000, Farmers Journal): isti mjenjac, dulji krajnji prijenos -> svi stupnjevi x1,25
+                (Landtreff 6910: "nur ueber eine Verlaengerung der Enduebersetzung"). Power boost 175 -> 196 KS uz PTO ili iznad 30 km/h (Lua).
+                PROCJENA: tocne brzine po stupnjevima nisu objavljene. -->
+           <motorConfiguration name="7810 AutoQuad II 20/20 50 km/h" hp="175" price="7000">
+                <!-- rotInertia 0.0013 (~default): manja inercija = manji "udarac" pri prebacivanju na nizu brzinu -->
+                <!-- dampingRateScale 0.9: jace kocenje motorom nakon prebacivanja na nizu brzinu -->
+                <!-- maxRpm 2300: rezerva za prekoracenje okretaja (regulator reze gorivo iznad 2200), manje naglog "hvatanja" pri prebacivanju na nizu brzinu -->
+                <!-- accelerationLimit: max. ubrzanje u m/s2 (default 2.0). Manje = mirnije ubrzavanje bez tereta -->
+                <!-- ptoMotorRpmRatio 3.89: 540 o/min PTO pri 2100 o/min motora (kao original) -->
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="50" maxBackwardSpeed="20" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- AutoQuad II kao u GIANTS konvenciji (JD 3650 u igri): GRUPE 1-4 = powershift bez spojke (changeTime 0),
+                     BRZINE A-E = rasponi sa spojkom (gearChangeTime 0.8 s = hod rucice po kulisi).
+                     OMAR206904 "Ground Speeds-20-Speed AutoQuad II", gume 20.8R38 @2100, ovdje x2300/2100:
+                     brzina = raspon X4; grupa = X1..X4 / X4 (E1-E4 22.7/27.3/32.7/40.0) -->
+                <transmission autoGearChangeTime="0.8" gearChangeTime="0.8" name="$l10n_info_transmission_manualWithPowerShiftGroups">
+                    <directionChange changeTime="0.3"/>
+                    <groups type="POWERSHIFT" changeTime="0">
+                        <group ratio="0.5675" name="1"/>
+                        <group ratio="0.6825" name="2"/>
+                        <group ratio="0.8175" name="3"/>
+                        <group ratio="1.0000" name="4" isDefault="true"/>
+                    </groups>
+                    <forwardGear maxSpeed="5.89" name="A" reverseName="A-R"/>
+                    <forwardGear maxSpeed="12.60" name="B" reverseName="B-R"/>
+                    <forwardGear maxSpeed="19.99" name="C" reverseName="C-R"/>
+                    <forwardGear maxSpeed="36.96" name="D" reverseName="D-R"/>
+                    <forwardGear maxSpeed="54.76" name="E" reverseName="E-R"/>
+                </transmission>
+                <!-- JD7810 AQ: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="creeperBase" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="creeperCover" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="consoleAutoQuad" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+
+           <!-- JD 7810 Powershift 19F/7R (OMAR189665): jedna rucica, puni powershift bez spojke. Brzine: OMAR206904 "Ground Speeds-Powershift", gume 20.8R38, nazivnih 2100 o/min; ovdje x2300/2100 (maxRpm 2300); za druge gume Lua skalira omjere po polumjeru -->
+           <motorConfiguration name="7810 Powershift 19/7" hp="175" price="10000">
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="40" maxBackwardSpeed="20" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- Powershift 19/7: 19 stupnjeva kao GRUPE (POWERSHIFT, bez spojke) - mijenjaju se tipkama grupe gore/dolje
+                     (sekvencijalno kao jedna rucica; H-mjenjac nije potreban). Jedna brzina (19. = grupa 1.0).
+                     OMAR206904 "Ground Speeds-Powershift", 20.8R38 @2100, x2300/2100. Natrag R1-R7 omjere postavlja Lua
+                     (JD7810Transmission S) prema tablici; u voznji natrag najvise grupa 7. -->
+                <!-- v183: gearChangeTime 0 = GIANTS POWERSHIFT tip brzine -> F/N/R bez spojke i u nacinu "rucno sa spojkom" (pravi PS: spojka samo za inching) -->
+                <transmission autoGearChangeTime="0.3" gearChangeTime="0" name="Powershift 19/7">
+                    <directionChange changeTime="0.4"/>
+                    <groups type="POWERSHIFT" changeTime="0">
+                        <group ratio="0.0404" name="1"/>
+                        <group ratio="0.0581" name="2"/>
+                        <group ratio="0.0732" name="3"/>
+                        <group ratio="0.0884" name="4"/>
+                        <group ratio="0.1035" name="5"/>
+                        <group ratio="0.1162" name="6"/>
+                        <group ratio="0.1338" name="7"/>
+                        <group ratio="0.1591" name="8" isDefault="true"/>
+                        <group ratio="0.1843" name="9"/>
+                        <group ratio="0.2096" name="10"/>
+                        <group ratio="0.2424" name="11"/>
+                        <group ratio="0.2778" name="12"/>
+                        <group ratio="0.3182" name="13"/>
+                        <group ratio="0.3611" name="14"/>
+                        <group ratio="0.4167" name="15"/>
+                        <group ratio="0.4672" name="16"/>
+                        <group ratio="0.5783" name="17"/>
+                        <group ratio="0.8081" name="18"/>
+                        <group ratio="1.0000" name="19"/>
+                    </groups>
+                    <forwardGear maxSpeed="43.37" name="F" reverseName="R"/>
+                </transmission>
+                <!-- JD7810 PS: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="consolePowershift" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+
+           <!-- JD 7810 IVT (2001-2003): kontinuirano promjenjivi prijenos, 0.05-40 km/h naprijed, do 17 km/h natrag (v172: Nebraska 1807 / ASME - natrag samo LOW) -->
+           <motorConfiguration name="7810 IVT" hp="175" price="20000">
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="40" maxBackwardSpeed="17" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- omjer = okretaji motora (rad/s) po m/s; 21.7 = 40 km/h pri 2300 o/min, 50.8 = 17 km/h natrag (v172) -->
+                <transmission minForwardGearRatio="21.7" maxForwardGearRatio="400" minBackwardGearRatio="50.8" maxBackwardGearRatio="400" name="IVT"/>
+                <!-- JD7810 IVT: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="consoleIVT" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+
+           <!-- JD 7810 IVT/AutoPowr 50 km/h (od 2001, DLG 2003 0-50 km/h): raspon do 50, LOW/HIGH tocke x1,25 (Lua), power boost (Lua). -->
+           <motorConfiguration name="7810 IVT 50 km/h" hp="175" price="25000">
+                <motor torqueScale="1.0" minRpm="850" maxRpm="2300" brakeForce="6.2" lowBrakeForceScale="0.1" maxForwardSpeed="50" maxBackwardSpeed="17" accelerationLimit="1.0" dampingRateScale="0.9" rotInertia="0.0013" ptoMotorRpmRatio="3.89">
+                    <!-- krivulja prema OECD 1713 (JD 7810, 1997., mjereno na PTO = vec bez gubitaka pogona): 785 Nm @1400,
+                         513 Nm @2100 nazivno (112,8 kW), porast momenta 53 %; najveca snaga ~124 kW oko 1800-1900 (Nebraska 1728/1729).
+                         torqueScale 1.0 jer su gubici vec u mjerenju na PTO; turbo "rupa" na praznom hodu ostaje -->
+                    <torque rpm="850"  torque="0.500"/>
+                    <torque rpm="1000" torque="0.660"/>
+                    <torque rpm="1200" torque="0.750"/>
+                    <torque rpm="1400" torque="0.785"/>
+                    <torque rpm="1600" torque="0.725"/>
+                    <torque rpm="1800" torque="0.655"/>
+                    <torque rpm="1900" torque="0.622"/>
+                    <torque rpm="2000" torque="0.575"/>
+                    <torque rpm="2100" torque="0.513"/>
+                    <torque rpm="2200" torque="0.300"/>
+                    <torque rpm="2300" torque="0.100"/>
+                </motor>
+                <!-- omjer = okretaji motora (rad/s) po m/s; 17.36 = 50 km/h pri 2300 o/min (v173), 50.8 = 17 km/h natrag (v172) -->
+                <transmission minForwardGearRatio="17.36" maxForwardGearRatio="400" minBackwardGearRatio="50.8" maxBackwardGearRatio="400" name="IVT"/>
+                <!-- JD7810 IVT: vidljivost po konfiguraciji - svaki cvor upisan samo u jednoj konfiguraciji (stara PowrQuad konzola i poluge obrisane iz modela 3.10.) -->
+                <objectChange node="consoleIVT" visibilityActive="true" visibilityInactive="false"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <exhaustEffects>
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5"/>
+        </exhaustEffects>
+
+        <motorStartDuration>3000</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="rpm" animName="needleRPM" doInterpolation="true" interpolationSpeed="0.9" groups="MOTOR_ACTIVE"/>
+            <!-- numbersRPM: srednji LCD crta Lua (JD7810Display.lua, red B 888.8 + red stupnja) -->
+            <dashboard displayType="ROT" valueType="motorTemperature" node="needleTemperature" minRot="0" maxRot="-88" rotAxis="2" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="speed" animName="needleSpeed" minValueAnim="0" maxValueAnim="40" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="clutchPedal" node="pedalClutch" minRot="0" maxRot="-25" rotAxis="1" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="movingDirection"  node="leverDirectionSelector" minRot="0 15 0" maxRot="0 -15 0" doInterpolation="true" interpolationSpeed="0.015" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="ignitionKey" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="0 0 90"/>
+                <state value="2" rotation="0 0 45"/>
+            </dashboard>
+        </dashboards>
+
+        <animationNodes>
+            <animationNode node="engineFan" rotSpeed="850" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="2"/>
+        </animationNodes>
+    </motorized>
+
+    <drivable>
+        <!-- v152: GIANTS smanjuje BRZINU zakretanja (tipkovnica/gamepad) s brzinom: min(1/(v[m/ms] x scale + offset), 1).
+             Zadano 80/0,7 (40 km/h -> 63 %). Ovdje 20/1,0: 20 km/h -> 90 %, 40 km/h -> 82 %. Najveci kut se ne mijenja.
+             Potpuno iskljuceno: scale="0" offset="1". Volan (G920) ovo ne koristi. -->
+        <speedRotScale scale="20" offset="1.0"/>
+        <steeringWheel node="steeringWheel" indoorRotation="570" outdoorRotation="120"/>
+
+        <dashboards>
+            <dashboard displayType="ROT" valueType="accelerationAxis" node="pedalGas"   minRot="0 0 0" maxRot="5 0 0"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="decelerationAxis" node="pedalBrake" minRot="0 0 0" maxRot="-13 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="steeringAngle"    node="playerLeftHandTargetRotationNode" minRot="0 120 0" maxRot="0 -150 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <licensePlates>
+        <licensePlate node="licensePlateFront" position="FRONT" preferedType="SQUARISH" placementArea="0.3 0.3 0.1 0.3">
+            <objectChange node="licensePlateFrontMount" visibilityActive="true" visibilityInactive="false"/>
+        </licensePlate>
+        <licensePlate node="licensePlateBack"  position="BACK" placementArea="0.2 0.25 0.2 0.25"/>
+    </licensePlates>
+
+    <wipers>
+        <wiper animName="wiperFront">
+            <state animSpeed="5.0" animPause="2.0"/>
+            <state animSpeed="5.0" animPause="0.0"/>
+            <state animSpeed="8.0" animPause="0.0"/>
+        </wiper>
+        <wiper animName="wiperBack">
+            <state animSpeed="6.0" animPause="2.0"/>
+        </wiper>
+    </wipers>
+
+    <animations>
+        <animation name="wiperFront" isKeyframe="true">
+            <part node="wiperFront" startTime="0.0" endTime="2.5" startRot="0 0 0"    endRot="-7 0 -48"/>
+            <part node="wiperFront" startTime="2.5" endTime="5.0" startRot="-7 0 -48" endRot="0 0 -95"/>
+
+            <sound template="wiper1" startTime="0" endTime="5" direction="1"  volumeScale="0.8" pitchScale="1.0" linkNode="wiperFront"/>
+            <sound template="wiper2" startTime="0" endTime="5" direction="-1" volumeScale="0.8" pitchScale="1.0" linkNode="wiperFront"/>
+        </animation>
+        <animation name="wiperBack" isKeyframe="true">
+            <part node="wiperBack" startTime="0.0" endTime="2.5" startRot="-6 0 90" endRot="0 0 0"/>
+            <part node="wiperBack" startTime="2.5" endTime="5.0" startRot="0 0 0"   endRot="-5 0 -65"/>
+
+            <sound template="wiper1" startTime="0" endTime="5" direction="1"  volumeScale="0.6" pitchScale="1.3" fadeIn="0.1" fadeOut="0.1" linkNode="wiperBack"/>
+            <sound template="wiper2" startTime="0" endTime="5" direction="-1" volumeScale="0.6" pitchScale="1.3" fadeIn="0.1" fadeOut="0.1" linkNode="wiperBack"/>
+        </animation>
+
+        <animation name="needleSpeed" isKeyframe="true">
+            <part node="needleSpeed" startTime="0" endTime="20"  startRot="0 0 0"    endRot="0 -144 0"/>
+            <part node="needleSpeed" startTime="20" endTime="30" startRot="0 -144 0" endRot="0 -204 0"/>
+            <part node="needleSpeed" startTime="30" endTime="35" startRot="0 -204 0" endRot="0 -224 0"/>
+            <part node="needleSpeed" startTime="35" endTime="40" startRot="0 -224 0" endRot="0 -240 0"/>
+        </animation>
+
+        <animation name="needleRPM" isKeyframe="true">
+            <part node="needleRPM" startTime="0" endTime="5" startRot="0 0 0" endRot="0 0 0"/>
+            <part node="needleRPM" startTime="5" endTime="22" startRot="0 0 0" endRot="0 -192 0"/>
+            <part node="needleRPM" startTime="22" endTime="23" startRot="0 -192 0" endRot="0 -203.3 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="attacherJointFrontArmBottom">
+                <dependentPart node="frontArmBottomHydraulic"/>
+            </movingTool>
+
+            <movingTool node="attacherJointBackArmBottom">
+                <dependentPart node="attacherJointBackArmMain"/>
+                <dependentPart node="attacherJointBackArmBottomLeftPart"/>
+                <dependentPart node="attacherJointBackArmBottomRightPart"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <!-- Attachers -->
+            <movingPart node="frontArmBottomHydraulic" referencePoint="frontArmBottomHydraulicPunchRef" referenceFrame="frontArmBottomHydraulicPunchRef">
+                <translatingPart node="frontArmBottomHydraulicPunch"/>
+            </movingPart>
+
+            <movingPart node="attacherJointBackArmMain" referencePoint="attacherJointBackArmMainPartRef" localReferencePoint="attacherJointBackArmMainPartLocalRef" referenceFrame="attacherJointBackArmMainRefFrame">
+                <dependentPart node="attacherJointBackArmMainPartLeft"/>
+                <dependentPart node="attacherJointBackArmMainPartRight"/>
+                <dependentPart node="attacherJointBackArmMainHydraulic"/>
+            </movingPart>
+
+            <movingPart node="attacherJointBackArmMainPartLeft" referencePoint="attacherJointBackArmMainPartLeftRef" referenceFrame="attacherJointBackArmMainPartLeftRef"/>
+            <movingPart node="attacherJointBackArmMainPartRight" referencePoint="attacherJointBackArmMainPartRightRef" referenceFrame="attacherJointBackArmMainPartRightRef"/>
+
+            <movingPart node="attacherJointBackArmMainHydraulic" referencePoint="attacherJointBackArmMainHydraulicRef" referenceFrame="attacherJointBackArmMainHydraulicRef">
+                <translatingPart node="attacherJointBackArmMainHydraulicPunch"/>
+            </movingPart>
+
+            <movingPart node="attacherJointBackArmBottomLeftPart" referencePoint="attacherJointBackArmBottomLeftPartRef" referenceFrame="attacherJointBackArmBottomLeftPartRef" scaleZ="true"/>
+            <movingPart node="attacherJointBackArmBottomRightPart" referencePoint="attacherJointBackArmBottomRightPartRef" referenceFrame="attacherJointBackArmBottomRightPartRef" scaleZ="true"/>
+
+            <!-- Wheels -->
+            <movingPart node="wheelFrontLeftRepr" referenceFrame="wheelFrontLeftReprPhys" limitedAxis="2" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentPart node="wheelFrontLeftReprOrient"/>
+                <dependentPart node="steeringBarLeft" maxUpdateDistance="100"/>
+            </movingPart>
+            <movingPart node="wheelFrontLeftReprOrient" referenceFrame="wheelFrontLeftReprPhys" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="steeringBarLeft" referencePoint="steeringBarLeftRef" referenceFrame="steeringBarLeftRef" scaleZ="true"/>
+
+            <movingPart node="wheelFrontRightRepr" referenceFrame="wheelFrontRightReprPhys" limitedAxis="2" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentPart node="wheelFrontRightReprOrient"/>
+                <dependentPart node="steeringBarRight" maxUpdateDistance="100"/>
+            </movingPart>
+            <movingPart node="wheelFrontRightReprOrient" referenceFrame="wheelFrontRightReprPhys" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="steeringBarRight" referencePoint="steeringBarRightRef" referenceFrame="steeringBarRightRef" scaleZ="true"/>
+
+            <movingPart node="axleAlignNode" referencePoint="axleAlignNodeRef" referenceFrame="axleAlignNodeRefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentPart node="axleFront"/>
+                <dependentPart node="axleFrontPart"/>
+            </movingPart>
+
+            <movingPart node="axleFront" referenceFrame="axleAlignNode" limitedAxis="1"/>
+
+            <movingPart node="axleFrontPart" referencePoint="axleFrontPartRef" referenceFrame="axleFrontPartRefFrame" limitedAxis="1">
+                <dependentPart node="axleFrontHydraulicLeft" maxUpdateDistance="50"/>
+                <dependentPart node="axleFrontHydraulicRight" maxUpdateDistance="50"/>
+            </movingPart>
+
+            <movingPart node="axleFrontHydraulicLeft" referencePoint="axleFrontHydraulicLeftRef" referenceFrame="axleFrontHydraulicLeftRef">
+                <translatingPart node="axleFrontHydraulicLeftPunch"/>
+            </movingPart>
+            <movingPart node="axleFrontHydraulicRight" referencePoint="axleFrontHydraulicRightRef" referenceFrame="axleFrontHydraulicRightRef">
+                <translatingPart node="axleFrontHydraulicRightPunch"/>
+            </movingPart>
+        </movingParts>
+
+        <dashboards>
+            <dashboard displayType="ROT" valueType="movingTool" node="leverFrontloaderArm" rotAxis="1" minRot="12" maxRot="-12" axis="AXIS_FRONTLOADER_ARM" attacherJointNodes="attacherJointFrontloaderQuicke attacherJointFrontloaderHauer" doInterpolation="true"/>
+            <dashboard displayType="ROT" valueType="movingTool" node="leverFrontloader" rotAxis="2" minRot="12" maxRot="-12" axis="AXIS_FRONTLOADER_TOOL" attacherJointNodes="attacherJointFrontloaderQuicke attacherJointFrontloaderHauer" doInterpolation="true"/>
+        </dashboards>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="344">
+                        <dashboard displayType="ROT" valueType="fillLevel" node="needleFuel" minRot="0" maxRot="-88" rotAxis="2" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
+                        <exactFillRootNode node="exactFillRootNodeFuel"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="2000">
+                        <dashboard displayType="ROT" valueType="fillLevel" node="needleAir" minRot="0" maxRot="-250" rotAxis="2" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" electronicsStarting="true"/>
+            <group name="MOTOR_ACTIVE" electronicsStarting="true" electronicsRunning="true"/>
+            <group name="BACK_ATTACHMENT" attacherJointIndices="2 4 5"/>
+            <group name="FRONT_ATTACHMENT" attacherJointIndices="1 3"/>
+        </groups>
+
+        <default>
+            <dashboard displayType="EMITTER" node="engineStartRed_decals" baseColor="SHARED_BLACK3" emitColor="RED" intensity="0.2" groups="MOTOR_STARTING"/>
+            <dashboard displayType="EMITTER" node="engineStartYellow_decals" baseColor="SHARED_BLACK3" emitColor="ORANGE" intensity="0.2" groups="MOTOR_STARTING"/>
+            <dashboard displayType="EMITTER" node="engineStartWhite_decals" baseColor="SHARED_BLACK3" intensity="0.2" groups="MOTOR_STARTING"/>
+        </default>
+    </dashboard>
+
+    <ai>
+        <agent frontWheelNodes="wheelFrontLeft wheelFrontRight"/>
+        <collisionTrigger useSize="true"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode wheelIndices="1 2" minZ="0.85" maxZ="2.45" yOffset="0.45"/>
+        <bendingNode wheelIndices="3 4" minZ="-2.15" maxZ="-0.1" yOffset="0.45"/>
+        <bendingNode minX="-1.15" maxX="1.15" minZ="-0.1" maxZ="0.85" yOffset="0.55"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="series7810_main_component1" node="0>" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelBackLeftHub" node="0>0|0|0|0" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|1" />
+        <i3dMapping id="wheelBackRightHub" node="0>0|0|1|0" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|3" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|1|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|5" />
+        <i3dMapping id="plateNumberLight01Left" node="0>0|2|0|0" />
+        <i3dMapping id="plateNumberLight01Right" node="0>0|2|0|1" />
+        <i3dMapping id="beaconLightLeft" node="0>0|2|0|2" /> <!-- u i3d se cvor zove beaconLight03 -->
+        <i3dMapping id="beaconLightRight" node="0>0|2|0|3" />
+        <i3dMapping id="defaultLights" node="0>0|2|1|0" />
+        <i3dMapping id="defaultLightsGlass01" node="0>0|2|1|1" />
+        <i3dMapping id="defaultLightsGlass02" node="0>0|2|1|2" />
+        <i3dMapping id="frontLightLow" node="0>0|2|2|0" />
+        <i3dMapping id="highBeamLow" node="0>0|2|2|1" />
+        <i3dMapping id="frontLightHighBottom" node="0>0|2|2|2" />
+        <i3dMapping id="frontLightHighTop" node="0>0|2|2|3" />
+        <i3dMapping id="highBeamHighBottom" node="0>0|2|2|4" />
+        <i3dMapping id="highBeamHighTop" node="0>0|2|2|5" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|2|2|6" />
+        <i3dMapping id="workLightFrontLow" node="0>0|2|3|0" />
+        <i3dMapping id="workLightBackLow" node="0>0|2|3|1" />
+        <i3dMapping id="workLightFrontHigh" node="0>0|2|3|2" />
+        <i3dMapping id="workLightBackHigh" node="0>0|2|3|3" />
+        <i3dMapping id="backLightsHigh" node="0>0|2|4|0" />
+        <i3dMapping id="turnLightLeftFront" node="0>0|2|5|0" />
+        <i3dMapping id="turnLightRightFront" node="0>0|2|5|1" />
+        <i3dMapping id="exitPoint" node="0>0|3" />
+        <i3dMapping id="componentJointAxleFront" node="0>0|4" />
+        <i3dMapping id="seat" node="0>0|5|0" />
+        <i3dMapping id="playerSkin" node="0>0|5|0|0" />
+        <i3dMapping id="playerSkinShift" node="0>0|5|0|1" />
+        <i3dMapping id="steeringWheel" node="0>0|5|1|0" />
+        <i3dMapping id="playerLeftHandTargetRotationNode" node="0>0|5|1|0|0|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|5|1|0|0|0|0" />
+        <i3dMapping id="wiperFront" node="0>0|5|2|0|0" />
+        <i3dMapping id="wiperBack" node="0>0|5|2|1|0" />
+        <i3dMapping id="pedalGas" node="0>0|5|3|0|0" />
+        <i3dMapping id="playerRightFootTargetGasRef" node="0>0|5|3|0|0|0" />
+        <i3dMapping id="pedalBrake" node="0>0|5|3|1" />
+        <i3dMapping id="playerRightFootTargetBrake" node="0>0|5|3|1|0" />
+        <i3dMapping id="pedalClutch" node="0>0|5|3|2" />
+        <i3dMapping id="playerRightFootTargetClutch" node="0>0|5|3|2|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|5|4|0" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|5|4|1" />
+        <i3dMapping id="playerRightFootTargetGas" node="0>0|5|4|2" />
+        <i3dMapping id="mirrorLeftTop" node="0>0|5|5|0" />
+        <i3dMapping id="mirrorLeftBottom" node="0>0|5|5|1" />
+        <i3dMapping id="mirrorRightTop" node="0>0|5|5|2" />
+        <i3dMapping id="mirrorRightBottom" node="0>0|5|5|3" />
+        <i3dMapping id="mirrorInterior" node="0>0|5|5|4" />
+        <i3dMapping id="ignitionKey" node="0>0|5|7|0|0" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|5|7|1" />
+        <i3dMapping id="leverFrontloaderRot" node="0>0|5|7|2" />
+        <i3dMapping id="leverFrontloaderArm" node="0>0|5|7|2|0" />
+        <i3dMapping id="leverFrontloader" node="0>0|5|7|2|0|0" />
+        <i3dMapping id="playerRightHandTargetFrontloader" node="0>0|5|7|2|0|0|0" />
+        <i3dMapping id="needleAir" node="0>0|5|7|3|0" />
+        <i3dMapping id="needleAirPart" node="0>0|5|7|3|0|0" />
+        <i3dMapping id="needleBoost" node="0>0|5|7|29|0" />
+        <i3dMapping id="needleBoostPart" node="0>0|5|7|29|0|0" />
+        <i3dMapping id="needleSpeed" node="0>0|5|7|4|0" />
+        <i3dMapping id="needleSpeedPart" node="0>0|5|7|4|0|0" />
+        <i3dMapping id="needleFuel" node="0>0|5|7|5|0" />
+        <i3dMapping id="needleRPM" node="0>0|5|7|6|0" />
+        <i3dMapping id="needleRPMPart" node="0>0|5|7|6|0|0" />
+        <i3dMapping id="needleTemperature" node="0>0|5|7|7|0" />
+        <i3dMapping id="leverTurnlight" node="0>0|5|7|8|0" />
+        <i3dMapping id="leverDirectionSelector" node="0>0|5|7|9|0" />
+        <i3dMapping id="switchLight" node="0>0|5|7|10|0" />
+        <i3dMapping id="switchWorklight" node="0>0|5|7|11|0" />
+        <i3dMapping id="numbersOperatingTime" node="0>0|5|7|12" />
+        <i3dMapping id="numbersRPM" node="0>0|5|7|13" />
+        <i3dMapping id="numbersTime" node="0>0|5|7|14" />
+        <i3dMapping id="engineStartRed_decals" node="0>0|5|7|15" />
+        <i3dMapping id="engineStartYellow_decals" node="0>0|5|7|16" />
+        <i3dMapping id="engineStartWhite_decals" node="0>0|5|7|17" />
+        <i3dMapping id="lampTurnlightLeft_decals" node="0>0|5|7|18" />
+        <i3dMapping id="lampTurnlightRight_decals" node="0>0|5|7|19" />
+        <i3dMapping id="lampHighbeam_decals" node="0>0|5|7|20" />
+        <i3dMapping id="lampHazardlights_decals" node="0>0|5|7|21" />
+        <i3dMapping id="lampTurnlightAttacherFront_decals" node="0>0|5|7|22" />
+        <i3dMapping id="lampTurnlightAttacherBack01_decals" node="0>0|5|7|23" />
+        <i3dMapping id="interiorGlow01_decals" node="0>0|5|7|24" />
+        <i3dMapping id="interiorGlow02_decals" node="0>0|5|7|25" />
+        <i3dMapping id="steeringConsole_decals01" node="0>0|5|7|26" />
+        <i3dMapping id="steeringConsole_decals02" node="0>0|5|7|27" />
+        <i3dMapping id="switchBeaconlight_decals" node="0>0|5|7|28" />
+        <i3dMapping id="attacherJointFrontRot" node="0>0|6|0|0" />
+        <i3dMapping id="attacherJointFrontRot2" node="0>0|6|0|0|0" />
+        <i3dMapping id="attacherJointFront" node="0>0|6|0|0|0|0" />
+        <i3dMapping id="attacherJointFrontArmBottom" node="0>0|6|0|1" />
+        <i3dMapping id="attacherJointFrontArmBottomTrans" node="0>0|6|0|1|0" />
+        <i3dMapping id="lowerLinkFrontLeft_lod" node="0>0|6|0|1|0|0|0" />
+        <i3dMapping id="lowerLinkFrontRight_lod" node="0>0|6|0|1|0|1|0" />
+        <i3dMapping id="frontArmBottomHydraulicPunchRef" node="0>0|6|0|1|0|2" />
+        <i3dMapping id="referencePointFrontBottom" node="0>0|6|0|1|0|3" />
+        <i3dMapping id="attacherJointFrontArmTop" node="0>0|6|0|2" />
+        <i3dMapping id="attacherJointBackRot" node="0>0|6|0|3" />
+        <i3dMapping id="attacherJointBackRot2" node="0>0|6|0|3|0" />
+        <i3dMapping id="attacherJointBack" node="0>0|6|0|3|0|0" />
+        <i3dMapping id="attacherJointBackArmBottom" node="0>0|6|0|4" />
+        <i3dMapping id="attacherJointBackArmBottomTrans" node="0>0|6|0|4|0" />
+        <i3dMapping id="attacherJointBackArmBottomLeft" node="0>0|6|0|4|0|0" />
+        <i3dMapping id="attacherJointBackArmBottomLeftRef" node="0>0|6|0|4|0|0|0" />
+        <i3dMapping id="attacherJointBackArmMainPartLeftRef" node="0>0|6|0|4|0|0|1" />
+        <i3dMapping id="attacherJointBackArmBottomLeftPartRef" node="0>0|6|0|4|0|0|2" />
+        <i3dMapping id="attacherJointBackArmBottomRight" node="0>0|6|0|4|0|1" />
+        <i3dMapping id="attacherJointBackArmBottomRightRef" node="0>0|6|0|4|0|1|0" />
+        <i3dMapping id="attacherJointBackArmMainPartRightRef" node="0>0|6|0|4|0|1|1" />
+        <i3dMapping id="attacherJointBackArmBottomRightPartRef" node="0>0|6|0|4|0|1|2" />
+        <i3dMapping id="referencePointBackBottom" node="0>0|6|0|4|0|2" />
+        <i3dMapping id="attacherJointBackArmMainPartRef" node="0>0|6|0|4|0|3" />
+        <i3dMapping id="attacherJointBackArmTop" node="0>0|6|0|5" />
+        <i3dMapping id="trailerAttacherBack" node="0>0|6|1|0" />
+        <i3dMapping id="trailerAttacherJointBack" node="0>0|6|1|0|0" />
+        <i3dMapping id="trailerAttacherLowBack" node="0>0|6|1|1" />
+        <i3dMapping id="trailerAttacherJointBackLow" node="0>0|6|1|1|0" />
+        <i3dMapping id="trailerSteeringLeftRef" node="0>0|6|1|1|1" />
+        <i3dMapping id="trailerSteeringRightRef" node="0>0|6|1|1|2" />
+        <i3dMapping id="trailerAttacherJointFront" node="0>0|6|1|2" />
+        <i3dMapping id="ptoOutputFront" node="0>0|6|2|0" />
+        <i3dMapping id="ptoOutputBack" node="0>0|6|2|1" />
+        <i3dMapping id="electricFront" node="0>0|6|3|0" />
+        <i3dMapping id="electricBack" node="0>0|6|3|1" />
+        <i3dMapping id="airDoubleYellow" node="0>0|6|3|2" />
+        <i3dMapping id="airDoubleRed" node="0>0|6|3|3" />
+        <i3dMapping id="hydraulicFrontIn01" node="0>0|6|3|4" />
+        <i3dMapping id="hydraulicFrontOut01" node="0>0|6|3|5" />
+        <i3dMapping id="hydraulicBackIn01" node="0>0|6|3|6" />
+        <i3dMapping id="hydraulicBackIn01Cover" node="0>0|6|3|6|0" />
+        <i3dMapping id="hydraulicBackOut01" node="0>0|6|3|7" />
+        <i3dMapping id="hydraulicBackOut01Cover" node="0>0|6|3|7|0" />
+        <i3dMapping id="hydraulicBackIn02" node="0>0|6|3|8" />
+        <i3dMapping id="hydraulicBackIn02Cover" node="0>0|6|3|8|0" />
+        <i3dMapping id="hydraulicBackOut02" node="0>0|6|3|9" />
+        <i3dMapping id="hydraulicBackOut02Cover" node="0>0|6|3|9|0" />
+        <i3dMapping id="hydraulicBackIn03" node="0>0|6|3|10" />
+        <i3dMapping id="hydraulicBackIn03Cover" node="0>0|6|3|10|0" />
+        <i3dMapping id="hydraulicBackOut03" node="0>0|6|3|11" />
+        <i3dMapping id="hydraulicBackOut03Cover" node="0>0|6|3|11|0" />
+        <i3dMapping id="hydraulicBackIn04" node="0>0|6|3|12" />
+        <i3dMapping id="hydraulicBackIn04Cover" node="0>0|6|3|12|0" />
+        <i3dMapping id="hydraulicBackOut04" node="0>0|6|3|13" />
+        <i3dMapping id="hydraulicBackOut04Cover" node="0>0|6|3|13|0" />
+        <i3dMapping id="rightPipe" node="0>0|6|3|14" />
+        <i3dMapping id="rightPipe_frontConnector" node="0>0|6|3|14|0" />
+        <i3dMapping id="rightPipe_backConnector" node="0>0|6|3|14|1" />
+        <i3dMapping id="bottomPipe01" node="0>0|6|3|15" />
+        <i3dMapping id="bottomPipe01_frontConnector" node="0>0|6|3|15|0" />
+        <i3dMapping id="bottomPipe01_backConnector" node="0>0|6|3|15|1" />
+        <i3dMapping id="bottomPipe02" node="0>0|6|3|16" />
+        <i3dMapping id="bottomPipe02_frontConnector" node="0>0|6|3|16|0" />
+        <i3dMapping id="bottomPipe02_backConnector" node="0>0|6|3|16|1" />
+        <i3dMapping id="bottomPipe03" node="0>0|6|3|17" />
+        <i3dMapping id="bottomPipe03_frontConnector" node="0>0|6|3|17|0" />
+        <i3dMapping id="bottomPipe03_backConnector" node="0>0|6|3|17|1" />
+        <i3dMapping id="bottomPipe04" node="0>0|6|3|18" />
+        <i3dMapping id="bottomPipe04_frontConnector" node="0>0|6|3|18|0" />
+        <i3dMapping id="bottomPipe04_backConnector" node="0>0|6|3|18|1" />
+        <i3dMapping id="quickeFrontloaderConsole" node="0>0|6|4|0" />
+        <i3dMapping id="attacherJointFrontloaderQuicke" node="0>0|6|4|0|0" />
+        <i3dMapping id="hauerFrontloaderConsole" node="0>0|6|4|1" />
+        <i3dMapping id="attacherJointFrontloaderHauer" node="0>0|6|4|1|0" />
+        <i3dMapping id="axleFrontPartRefFrame" node="0>0|7|0" />
+        <i3dMapping id="axleFrontPart" node="0>0|7|0|0" />
+        <i3dMapping id="axleFrontRefFrame" node="0>0|7|0|0|0" />
+        <i3dMapping id="axleFront" node="0>0|7|0|0|0|0" />
+        <i3dMapping id="wheelFrontLeftRepr" node="0>0|7|0|0|0|0|0|0" />
+        <i3dMapping id="steeringBarLeft" node="0>0|7|0|0|0|0|0|0|0" />
+        <i3dMapping id="wheelFrontLeftPart" node="0>0|7|0|0|0|0|0|0|1" />
+        <i3dMapping id="wheelFrontLeftFender" node="0>0|7|0|0|0|0|0|0|2" />
+        <i3dMapping id="driveShaftLeftOuter" node="0>0|7|0|0|0|0|0|0|3|0" />
+        <i3dMapping id="wheelFrontRightRepr" node="0>0|7|0|0|0|0|1|0" />
+        <i3dMapping id="steeringBarRight" node="0>0|7|0|0|0|0|1|0|0" />
+        <i3dMapping id="wheelFrontRightPart" node="0>0|7|0|0|0|0|1|0|1" />
+        <i3dMapping id="wheelFrontRightFender" node="0>0|7|0|0|0|0|1|0|2" />
+        <i3dMapping id="driveShaftRightOuter" node="0>0|7|0|0|0|0|1|0|3|0" />
+        <i3dMapping id="driveShaftLeftInner" node="0>0|7|0|0|0|0|2|0" />
+        <i3dMapping id="driveShaftRightInner" node="0>0|7|0|0|0|0|3|0" />
+        <i3dMapping id="axleFrontHydraulicLeftRef" node="0>0|7|0|0|0|0|4" />
+        <i3dMapping id="axleFrontHydraulicRightRef" node="0>0|7|0|0|0|0|5" />
+        <i3dMapping id="steeringBarCenter" node="0>0|7|0|0|1|0" />
+        <i3dMapping id="steeringBarLeftRef" node="0>0|7|0|0|1|0|0" />
+        <i3dMapping id="steeringBarRightRef" node="0>0|7|0|0|1|0|1" />
+        <i3dMapping id="engineFan" node="0>0|7|1" />
+        <i3dMapping id="axleFrontHydraulicLeft" node="0>0|7|2" />
+        <i3dMapping id="axleFrontHydraulicLeftPunch" node="0>0|7|2|0" />
+        <i3dMapping id="axleFrontHydraulicRight" node="0>0|7|3" />
+        <i3dMapping id="axleFrontHydraulicRightPunch" node="0>0|7|3|0" />
+        <i3dMapping id="frontArmBottomHydraulic" node="0>0|7|4" />
+        <i3dMapping id="frontArmBottomHydraulicPunch" node="0>0|7|4|0" />
+        <i3dMapping id="attacherJointBackArmMainHydraulic" node="0>0|7|5" />
+        <i3dMapping id="attacherJointBackArmMainHydraulicPunch" node="0>0|7|5|0" />
+        <i3dMapping id="attacherJointBackArmMainRefFrame" node="0>0|7|6" />
+        <i3dMapping id="attacherJointBackArmMain" node="0>0|7|6|0" />
+        <i3dMapping id="attacherJointBackArmMainPartLeft" node="0>0|7|6|0|0" />
+        <i3dMapping id="attacherJointBackArmMainPartRight" node="0>0|7|6|0|1" />
+        <i3dMapping id="attacherJointBackArmMainHydraulicRef" node="0>0|7|6|0|2" />
+        <i3dMapping id="attacherJointBackArmMainPartLocalRef" node="0>0|7|6|0|3" />
+        <i3dMapping id="attacherJointBackArmBottomLeftPart" node="0>0|7|7" />
+        <i3dMapping id="attacherJointBackArmBottomRightPart" node="0>0|7|8" />
+        <i3dMapping id="exhaustParticle" node="0>0|8|0" />
+        <i3dMapping id="licensePlateFront" node="0>0|8|1" />
+        <i3dMapping id="licensePlateBack" node="0>0|8|2" />
+        <i3dMapping id="licensePlateFrontMount" node="0>0|8|3" />
+        <i3dMapping id="exactFillRootNodeFuel" node="0>0|8|4" />
+        <i3dMapping id="leverFrontloaderRubber" node="0>2|3" />
+        <i3dMapping id="series7810_axle_component2" node="1>" />
+        <i3dMapping id="wheelFrontLeftReprPhys" node="1>0|0" />
+        <i3dMapping id="wheelFrontLeft" node="1>0|0|0|0" />
+        <i3dMapping id="wheelFrontLeftReprOrient" node="1>0|0|1" />
+        <i3dMapping id="axleAlignNodeRefFrame" node="1>0|0|1|0" />
+        <i3dMapping id="axleAlignNode" node="1>0|0|1|0|0" />
+        <i3dMapping id="wheelFrontRightReprPhys" node="1>1|0" />
+        <i3dMapping id="wheelFrontRight" node="1>1|0|0|0" />
+        <i3dMapping id="wheelFrontRightReprOrient" node="1>1|0|1" />
+        <i3dMapping id="axleAlignNodeRef" node="1>1|0|1|0" />
+        <i3dMapping id="axleFrontPartRef" node="1>2" />
+    <i3dMapping id="consoleIVT" node="0>0|9|7" />
+    <i3dMapping id="leverIVTRot" node="0>0|9|7|5" />
+    <i3dMapping id="leverIVT" node="0>0|9|7|5|0" />
+    <i3dMapping id="handThrottleIVTAxis" node="0>0|9|7|4" />
+    <i3dMapping id="handThrottleIVT" node="0>0|9|7|4|0" />
+    <i3dMapping id="fcKnobIVTRot" node="0>0|9|7|8" />
+    <i3dMapping id="fcKnobIVT" node="0>0|9|7|8|0" />
+    <i3dMapping id="selKnobIVTRot" node="0>0|9|7|10" />
+    <i3dMapping id="selKnobIVT" node="0>0|9|7|10|0" />
+    <i3dMapping id="consoleIVT_mfwd" node="0>0|9|7|11" />
+    <i3dMapping id="mfwdIndicatorIVT" node="0>0|9|7|9|0|1" />
+    <i3dMapping id="hitchLeverRot" node="0>0|9|9|5|0|0" />
+    <i3dMapping id="scvLever1Rot" node="0>0|9|9|6|0|0" />
+    <i3dMapping id="scvLever2Rot" node="0>0|9|9|6|3|0" />
+    <i3dMapping id="scvLever3Rot" node="0>0|9|9|6|6|0" />
+    <i3dMapping id="hmsSwitchRot" node="0>0|9|9|8|2|1|0" />
+    <i3dMapping id="hmsLettersGlow" node="0>0|9|9|8|2|1|0|1" />
+    <i3dMapping id="performanceMonitor" node="0>0|9|6|0|1" />
+    <i3dMapping id="pmLCD" node="0>0|9|6|0|1|4" />
+    <i3dMapping id="agroGsm" node="0>0|9|6|0|2" />
+    <i3dMapping id="gsmLCD" node="0>0|9|6|0|2|0|5" />
+    <i3dMapping id="gsmPhone" node="0>0|9|6|0|2|0" />
+    <i3dMapping id="gsmCradle" node="0>0|9|6|0|2|3" />
+    <i3dMapping id="consoleIVT_joyCover" node="0>0|9|7|6" />
+        <i3dMapping id="consolePowershift" node="0>0|9|8" />
+        <i3dMapping id="creeperBase" node="0>0|9|9|8|9" />
+        <i3dMapping id="creeperRot" node="0>0|9|9|8|9|0" />
+        <i3dMapping id="creeperCover" node="0>0|9|9|8|8" />
+        <i3dMapping id="acIconGlow" node="0>0|9|9|8|0|1|0|1" />
+        <i3dMapping id="ivtSpeedWheelGlow" node="0>0|9|7|5|1|0|1" />
+        <i3dMapping id="ivtSpeedWheelRot" node="0>0|9|7|5|1|0" />
+        <i3dMapping id="consoleAutoQuad" node="0>0|9|10" />
+        <i3dMapping id="aqRangeLat" node="0>0|9|10|10|0" />
+        <i3dMapping id="aqRangeFA" node="0>0|9|10|10|0|0" />
+        <i3dMapping id="aqBtnUp" node="0>0|9|10|10|0|0|1|3" />
+        <i3dMapping id="aqBtnDown" node="0>0|9|10|10|0|0|1|2" />
+        <i3dMapping id="aqSpeedRot" node="0>0|9|10|11|0" />
+        <i3dMapping id="aqAutoEcoRot" node="0>0|9|10|2|0" />
+        <i3dMapping id="aqFcKnobRot" node="0>0|9|10|3|0" />
+        <i3dMapping id="aqMfwdRot" node="0>0|9|10|7|0" />
+        <i3dMapping id="aqRangePivot" node="0>0|9|10|10" />
+        <i3dMapping id="psShiftPivot" node="0>0|9|8|9" />
+        <i3dMapping id="psShiftLat" node="0>0|9|8|9|0" />
+        <i3dMapping id="psShiftFA" node="0>0|9|8|9|0|0" />
+        <i3dMapping id="psShiftLever" node="0>0|9|8|9|0|0|0" />
+        <i3dMapping id="psHandThrottlePivot" node="0>0|9|8|10" />
+        <i3dMapping id="psHandThrottleRot" node="0>0|9|8|10|0" />
+        <i3dMapping id="aqHandThrottlePivot" node="0>0|9|10|4" />
+        <i3dMapping id="aqHandThrottleRot" node="0>0|9|10|4|0" />
+        <!-- Performance Monitor v89 (5.10.2026): tisak koji svijetli nocu + tipke -->
+    <i3dMapping id="pmGlowB" node="0>0|9|6|0|1|2|0" />
+    <i3dMapping id="pmGlowO" node="0>0|9|6|0|1|2|1" />
+    <i3dMapping id="pmGlowW" node="0>0|9|6|0|1|2|2" />
+    <i3dMapping id="pmLabels" node="0>0|9|6|0|1|2" />
+    <i3dMapping id="pmKey01" node="0>0|9|6|0|1|1|0" />
+    <i3dMapping id="pmKey01W" node="0>0|9|6|0|1|1|0|0" />
+    <i3dMapping id="pmKey01Y" node="0>0|9|6|0|1|1|0|1" />
+    <i3dMapping id="pmKey02" node="0>0|9|6|0|1|1|1" />
+    <i3dMapping id="pmKey02W" node="0>0|9|6|0|1|1|1|0" />
+    <i3dMapping id="pmKey02Y" node="0>0|9|6|0|1|1|1|1" />
+    <i3dMapping id="pmKey03" node="0>0|9|6|0|1|1|2" />
+    <i3dMapping id="pmKey03W" node="0>0|9|6|0|1|1|2|0" />
+    <i3dMapping id="pmKey03Y" node="0>0|9|6|0|1|1|2|1" />
+    <i3dMapping id="pmKey04" node="0>0|9|6|0|1|1|3" />
+    <i3dMapping id="pmKey04W" node="0>0|9|6|0|1|1|3|0" />
+    <i3dMapping id="pmKey04Y" node="0>0|9|6|0|1|1|3|1" />
+    <i3dMapping id="pmKey05" node="0>0|9|6|0|1|1|4" />
+    <i3dMapping id="pmKey05W" node="0>0|9|6|0|1|1|4|0" />
+    <i3dMapping id="pmKey05Y" node="0>0|9|6|0|1|1|4|1" />
+    <i3dMapping id="pmKey06" node="0>0|9|6|0|1|1|5" />
+    <i3dMapping id="pmKey06W" node="0>0|9|6|0|1|1|5|0" />
+    <i3dMapping id="pmKey06Y" node="0>0|9|6|0|1|1|5|1" />
+    <i3dMapping id="pmKey07" node="0>0|9|6|0|1|1|6" />
+    <i3dMapping id="pmKey07W" node="0>0|9|6|0|1|1|6|0" />
+    <i3dMapping id="pmKey07Y" node="0>0|9|6|0|1|1|6|1" />
+    <i3dMapping id="pmKey08" node="0>0|9|6|0|1|1|7" />
+    <i3dMapping id="pmKey08W" node="0>0|9|6|0|1|1|7|0" />
+    <i3dMapping id="pmKey08Y" node="0>0|9|6|0|1|1|7|1" />
+    <i3dMapping id="pmKey09" node="0>0|9|6|0|1|1|8" />
+    <i3dMapping id="pmKey09W" node="0>0|9|6|0|1|1|8|0" />
+    <i3dMapping id="pmKey09Y" node="0>0|9|6|0|1|1|8|1" />
+    <i3dMapping id="pmKey10" node="0>0|9|6|0|1|1|9" />
+    <i3dMapping id="pmKey10W" node="0>0|9|6|0|1|1|9|0" />
+    <i3dMapping id="pmKey10Y" node="0>0|9|6|0|1|1|9|1" />
+    <i3dMapping id="pmKey11" node="0>0|9|6|0|1|1|10" />
+    <i3dMapping id="pmKey11W" node="0>0|9|6|0|1|1|10|0" />
+    <i3dMapping id="pmKey11Y" node="0>0|9|6|0|1|1|10|1" />
+    <i3dMapping id="pmKey12" node="0>0|9|6|0|1|1|11" />
+    <i3dMapping id="pmKey12Y" node="0>0|9|6|0|1|1|11|0" />
+        <i3dMapping id="psPlateGlow" node="0>0|9|8|12" />
+        <i3dMapping id="aqPlateGlow" node="0>0|9|10|0" />
+        <i3dMapping id="aqPlateGlowRed" node="0>0|9|10|1" />
+        <i3dMapping id="ivtPanelGlowRed" node="0>0|9|7|13" />
+        <i3dMapping id="hvacScalesGlowRed" node="0>0|9|9|10" />
+        <i3dMapping id="hvacScalesGlowBlue" node="0>0|9|9|9" />
+        <i3dMapping id="rearWiperIconGlow" node="0>0|9|9|8|3|1|1" />
+        <i3dMapping id="mfwdIconGlowIVT" node="0>0|9|7|9|0|2" />
+        <i3dMapping id="mfwdIconGlowPS" node="0>0|9|8|6|0|2" />
+        <i3dMapping id="mfwdIconGlowAQ" node="0>0|9|10|7|0|0" />
+        <i3dMapping id="aqAutoEcoGlow" node="0>0|9|10|2|0|0" />
+        <i3dMapping id="aqBtnUpGlow" node="0>0|9|10|10|0|0|1|1" />
+        <i3dMapping id="aqBtnDownGlow" node="0>0|9|10|10|0|0|1|0" />
+        <i3dMapping id="hitchFRaiseGlow" node="0>0|9|9|5|2|4" />
+        <i3dMapping id="hitchFLowerGlow" node="0>0|9|9|5|2|3" />
+        <i3dMapping id="panelsGlow" node="0>0|9|9|11" />
+        <i3dMapping id="ivtGlow" node="0>0|9|7|12" />
+        <!-- v139: GreenStar terminal, birac V, StarFire 3000, Brazda plocice -->
+        <i3dMapping id="gsTerminalMount" node="0>0|9|6|0|3" />
+        <i3dMapping id="gsTerminal" node="0>0|9|6|0|3|1" />
+        <i3dMapping id="gsScreen" node="0>0|9|6|0|3|1|25" />
+        <i3dMapping id="gsScreenGlow" node="0>0|9|6|0|3|1|25|25" />
+        <i3dMapping id="gsHdr" node="0>0|9|6|0|3|1|25|1" />
+        <i3dMapping id="gsFoot" node="0>0|9|6|0|3|1|25|0" />
+        <i3dMapping id="gsLightbar_01" node="0>0|9|6|0|3|1|25|3" />
+        <i3dMapping id="gsLightbar_02" node="0>0|9|6|0|3|1|25|4" />
+        <i3dMapping id="gsLightbar_03" node="0>0|9|6|0|3|1|25|5" />
+        <i3dMapping id="gsLightbar_04" node="0>0|9|6|0|3|1|25|6" />
+        <i3dMapping id="gsLightbar_05" node="0>0|9|6|0|3|1|25|7" />
+        <i3dMapping id="gsLightbar_06" node="0>0|9|6|0|3|1|25|8" />
+        <i3dMapping id="gsLightbar_07" node="0>0|9|6|0|3|1|25|9" />
+        <i3dMapping id="gsLightbar_08" node="0>0|9|6|0|3|1|25|10" />
+        <i3dMapping id="gsLightbar_09" node="0>0|9|6|0|3|1|25|11" />
+        <i3dMapping id="gsLightbar_10" node="0>0|9|6|0|3|1|25|12" />
+        <i3dMapping id="gsLightbar_11" node="0>0|9|6|0|3|1|25|13" />
+        <i3dMapping id="gsLightbar_12" node="0>0|9|6|0|3|1|25|14" />
+        <i3dMapping id="gsLightbar_13" node="0>0|9|6|0|3|1|25|15" />
+        <i3dMapping id="gsLightbar_14" node="0>0|9|6|0|3|1|25|16" />
+        <i3dMapping id="gsLightbar_15" node="0>0|9|6|0|3|1|25|17" />
+        <i3dMapping id="gsRowA" node="0>0|9|6|0|3|1|25|18" />
+        <i3dMapping id="gsRowB" node="0>0|9|6|0|3|1|25|19" />
+        <i3dMapping id="gsRowC" node="0>0|9|6|0|3|1|25|20" />
+        <i3dMapping id="gsRowD" node="0>0|9|6|0|3|1|25|21" />
+        <i3dMapping id="gsRowE" node="0>0|9|6|0|3|1|25|22" />
+        <i3dMapping id="gsRowF" node="0>0|9|6|0|3|1|25|23" />
+        <i3dMapping id="gsRowG" node="0>0|9|6|0|3|1|25|24" />
+        <i3dMapping id="gsValA" node="0>0|9|6|0|3|1|25|26" />
+        <i3dMapping id="gsValB" node="0>0|9|6|0|3|1|25|27" />
+        <i3dMapping id="gsValC" node="0>0|9|6|0|3|1|25|28" />
+        <i3dMapping id="gsValD" node="0>0|9|6|0|3|1|25|29" />
+        <i3dMapping id="gsValE" node="0>0|9|6|0|3|1|25|30" />
+        <i3dMapping id="gsValF" node="0>0|9|6|0|3|1|25|31" />
+        <i3dMapping id="gsValG" node="0>0|9|6|0|3|1|25|32" />
+        <i3dMapping id="gsKeyA" node="0>0|9|6|0|3|1|11" />
+        <i3dMapping id="gsKeyB" node="0>0|9|6|0|3|1|12" />
+        <i3dMapping id="gsKeyC" node="0>0|9|6|0|3|1|14" />
+        <i3dMapping id="gsKeyD" node="0>0|9|6|0|3|1|16" />
+        <i3dMapping id="gsKeyE" node="0>0|9|6|0|3|1|18" />
+        <i3dMapping id="gsKeyF" node="0>0|9|6|0|3|1|19" />
+        <i3dMapping id="gsKeyG" node="0>0|9|6|0|3|1|20" />
+        <i3dMapping id="gsKey0" node="0>0|9|6|0|3|1|1" />
+        <i3dMapping id="gsKey1" node="0>0|9|6|0|3|1|2" />
+        <i3dMapping id="gsKey2" node="0>0|9|6|0|3|1|3" />
+        <i3dMapping id="gsKey3" node="0>0|9|6|0|3|1|4" />
+        <i3dMapping id="gsKey4" node="0>0|9|6|0|3|1|5" />
+        <i3dMapping id="gsKey5" node="0>0|9|6|0|3|1|6" />
+        <i3dMapping id="gsKey6" node="0>0|9|6|0|3|1|7" />
+        <i3dMapping id="gsKey7" node="0>0|9|6|0|3|1|8" />
+        <i3dMapping id="gsKey8" node="0>0|9|6|0|3|1|9" />
+        <i3dMapping id="gsKey9" node="0>0|9|6|0|3|1|10" />
+        <i3dMapping id="gsKeyDot" node="0>0|9|6|0|3|1|17" />
+        <i3dMapping id="gsKeyClr" node="0>0|9|6|0|3|1|15" />
+        <i3dMapping id="gsKeyPage" node="0>0|9|6|0|3|1|22" />
+        <i3dMapping id="gsKeySetup" node="0>0|9|6|0|3|1|24" />
+        <i3dMapping id="gsKeyInfo" node="0>0|9|6|0|3|1|21" />
+        <i3dMapping id="gsKeyRun" node="0>0|9|6|0|3|1|23" />
+        <i3dMapping id="gsKeyBright" node="0>0|9|6|0|3|1|13" />
+        <i3dMapping id="vSelBase" node="0>0|9|6|0|4" />
+        <i3dMapping id="vSelKnob" node="0>0|9|6|0|4|2" />
+        <i3dMapping id="vSelEscutcheon" node="0>0|9|6|0|4|1" />
+        <i3dMapping id="vSelDecal" node="0>0|9|6|0|4|0" />
+        <i3dMapping id="starFire3000" node="0>0|9|12" />
+        <i3dMapping id="plateBrazdaTipska" node="0>0|9|11" />
+        <i3dMapping id="brazdaUska" node="0>0|9|6|0|5" />
+    </i3dMappings>
+    <!-- Interactive Control (FS25_interactiveControl): klik na tipke Performance Monitora i vadenje Agro GSM-a iz korita.
+         Nevidljiva podrucja klika na sredini svake tipke (v171: iconType JD7810_CLEAR = prazna ikona). IC mjeri podrucje na ekranu: size 0.016 = oko cijele tipke (44 x 27 mm, PM v89)
+         gledano s vozacevog mjesta (oko 1.0 m). Potvrda klika: kratki "piip" (sounds/jd7810_pm_beep.ogg). IMPLEMENT, AREA/H i DIM nemaju funkciju. -->
+    <interactiveControl>
+        <!-- v171: nevidljiva ikona klika (Darijan 9.10.) - IC ne poznaje showClickIcon, zato vlastiti prazan iconType. -->
+        <registers>
+            <clickIcon name="JD7810_CLEAR" filename="icons/jd7810_clickIcon.i3d" node="0" blinkSpeed="0"/>
+        </registers>
+        <interactiveControls>
+            <!-- AREA -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmArea" negText="$l10n_ic_jd7810_pmArea" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="-0.0453 0.0018 0.0037" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_AREA"/>
+            </interactiveControl>
+            <!-- % SLIP -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmSlip" negText="$l10n_ic_jd7810_pmSlip" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0453 0.0018 0.0037" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_SLIP"/>
+            </interactiveControl>
+            <!-- DISTANCE -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmWork" negText="$l10n_ic_jd7810_pmWork" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="-0.0453 0.0018 0.0324" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_WORK"/>
+            </interactiveControl>
+            <!-- SPEED -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmSpeed" negText="$l10n_ic_jd7810_pmSpeed" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0453 0.0018 0.0324" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_SPEED"/>
+            </interactiveControl>
+            <!-- WIDTH -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmWidth" negText="$l10n_ic_jd7810_pmWidth" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="-0.0453 0.0018 0.0612" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_WIDTH"/>
+            </interactiveControl>
+            <!-- SERVICE -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmServ" negText="$l10n_ic_jd7810_pmServ" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0000 0.0018 0.0612" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_SERV"/>
+            </interactiveControl>
+            <!-- PTO RPM -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmPto" negText="$l10n_ic_jd7810_pmPto" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0453 0.0018 0.0612" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_PTO"/>
+            </interactiveControl>
+            <!-- ZERO -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmZero" negText="$l10n_ic_jd7810_pmZero" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0000 0.0018 0.0900" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_ZERO"/>
+            </interactiveControl>
+            <!-- SET -->
+            <interactiveControl posText="$l10n_ic_jd7810_pmSet" negText="$l10n_ic_jd7810_pmSet" allowsSaving="false">
+                <clickPoint linkNode="performanceMonitor" translation="0.0453 0.0018 0.0900" size="0.016" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_PM_SET"/>
+            </interactiveControl>
+            <!-- Agro GSM: izvadi / vrati u korito (izvaden se ne puni) -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsmOut" negText="$l10n_ic_jd7810_gsmIn" allowsSaving="false">
+                <clickPoint linkNode="gsmCradle" translation="0 0.012 0" size="0.020" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GSM_CRADLE"/>
+            </interactiveControl>
+            <!-- ===== GreenStar terminal (JD7810Hms.lua): 24 tipke, klik = Interactive Control. Koordinate u i3d sustavu cvora gsTerminal nakon GIANTS exporta (Blender x,y,z -> i3d x, z, -y): X desno, Y = prema vozacu (vrh tipke +0.5 mm = 0.0025), Z = -visina po licu. PROVJERITI u GE na prvoj tipki (A) prije ostalih. ===== -->
+            <!-- svjetlina -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsBright" negText="$l10n_ic_jd7810_gsBright" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.2570" size="0.012" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_BRIGHT"/>
+            </interactiveControl>
+            <!-- tipka A -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsA" negText="$l10n_ic_jd7810_gsA" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.2355" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_A"/>
+            </interactiveControl>
+            <!-- tipka B -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsB" negText="$l10n_ic_jd7810_gsB" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.2140" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_B"/>
+            </interactiveControl>
+            <!-- tipka C -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsC" negText="$l10n_ic_jd7810_gsC" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.1925" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_C"/>
+            </interactiveControl>
+            <!-- tipka D -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsD" negText="$l10n_ic_jd7810_gsD" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.1710" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_D"/>
+            </interactiveControl>
+            <!-- tipka E -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsE" negText="$l10n_ic_jd7810_gsE" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.1495" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_E"/>
+            </interactiveControl>
+            <!-- tipka F -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsF" negText="$l10n_ic_jd7810_gsF" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.1280" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_F"/>
+            </interactiveControl>
+            <!-- tipka G -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsG" negText="$l10n_ic_jd7810_gsG" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0660 0.0025 -0.1065" size="0.013" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_G"/>
+            </interactiveControl>
+            <!-- tipka 1 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs1" negText="$l10n_ic_jd7810_gs1" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0520 0.0025 -0.0810" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_1"/>
+            </interactiveControl>
+            <!-- tipka 2 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs2" negText="$l10n_ic_jd7810_gs2" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0270 0.0025 -0.0810" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_2"/>
+            </interactiveControl>
+            <!-- tipka 3 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs3" negText="$l10n_ic_jd7810_gs3" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0020 0.0025 -0.0810" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_3"/>
+            </interactiveControl>
+            <!-- tipka 4 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs4" negText="$l10n_ic_jd7810_gs4" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0520 0.0025 -0.0620" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_4"/>
+            </interactiveControl>
+            <!-- tipka 5 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs5" negText="$l10n_ic_jd7810_gs5" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0270 0.0025 -0.0620" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_5"/>
+            </interactiveControl>
+            <!-- tipka 6 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs6" negText="$l10n_ic_jd7810_gs6" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0020 0.0025 -0.0620" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_6"/>
+            </interactiveControl>
+            <!-- tipka 7 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs7" negText="$l10n_ic_jd7810_gs7" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0520 0.0025 -0.0430" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_7"/>
+            </interactiveControl>
+            <!-- tipka 8 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs8" negText="$l10n_ic_jd7810_gs8" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0270 0.0025 -0.0430" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_8"/>
+            </interactiveControl>
+            <!-- tipka 9 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs9" negText="$l10n_ic_jd7810_gs9" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0020 0.0025 -0.0430" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_9"/>
+            </interactiveControl>
+            <!-- tipka . -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsDot" negText="$l10n_ic_jd7810_gsDot" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0520 0.0025 -0.0240" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_DOT"/>
+            </interactiveControl>
+            <!-- tipka 0 -->
+            <interactiveControl posText="$l10n_ic_jd7810_gs0" negText="$l10n_ic_jd7810_gs0" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0270 0.0025 -0.0240" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_0"/>
+            </interactiveControl>
+            <!-- tipka CLR -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsClr" negText="$l10n_ic_jd7810_gsClr" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="-0.0020 0.0025 -0.0240" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_CLR"/>
+            </interactiveControl>
+            <!-- PAGE -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsPage" negText="$l10n_ic_jd7810_gsPage" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0500 0.0025 -0.0810" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_PAGE"/>
+            </interactiveControl>
+            <!-- SETUP -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsSetup" negText="$l10n_ic_jd7810_gsSetup" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0500 0.0025 -0.0620" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_SETUP"/>
+            </interactiveControl>
+            <!-- INFO -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsInfo" negText="$l10n_ic_jd7810_gsInfo" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0500 0.0025 -0.0430" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_INFO"/>
+            </interactiveControl>
+            <!-- RUN -->
+            <interactiveControl posText="$l10n_ic_jd7810_gsRun" negText="$l10n_ic_jd7810_gsRun" allowsSaving="false">
+                <clickPoint linkNode="gsTerminal" translation="0.0500 0.0025 -0.0240" size="0.017" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_GS_RUN"/>
+            </interactiveControl>
+            <!-- ===== Klizni prekidac biraca V (P3): kapa = sljedeci polozaj (linkNode = pokretni cvor vSelKnob), 4 ikone na naljepnici = skok. i3d osi (Blender x,y,z -> x, z, -y). PROVJERITI u GE. ===== -->
+            <interactiveControl posText="$l10n_ic_jd7810_vSelNext" negText="$l10n_ic_jd7810_vSelNext" allowsSaving="false">
+                <clickPoint linkNode="vSelKnob" translation="0 0.0090 0" size="0.012" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_V_SEL_NEXT"/>
+            </interactiveControl>
+            <interactiveControl posText="$l10n_ic_jd7810_vSel1" negText="$l10n_ic_jd7810_vSel1" allowsSaving="false">
+                <clickPoint linkNode="vSelBase" translation="0.0190 0.0010 0.0150" size="0.009" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_V_SEL_1"/>
+            </interactiveControl>
+            <interactiveControl posText="$l10n_ic_jd7810_vSel2" negText="$l10n_ic_jd7810_vSel2" allowsSaving="false">
+                <clickPoint linkNode="vSelBase" translation="0.0190 0.0010 0.0050" size="0.009" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_V_SEL_2"/>
+            </interactiveControl>
+            <interactiveControl posText="$l10n_ic_jd7810_vSel3" negText="$l10n_ic_jd7810_vSel3" allowsSaving="false">
+                <clickPoint linkNode="vSelBase" translation="0.0190 0.0010 -0.0050" size="0.009" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_V_SEL_3"/>
+            </interactiveControl>
+            <interactiveControl posText="$l10n_ic_jd7810_vSel4" negText="$l10n_ic_jd7810_vSel4" allowsSaving="false">
+                <clickPoint linkNode="vSelBase" translation="0.0190 0.0010 -0.0150" size="0.009" iconType="JD7810_CLEAR" type="INDOOR"/>
+                <function name="JD7810_V_SEL_4"/>
+            </interactiveControl>
+        </interactiveControls>
+    </interactiveControl>
+</vehicle>

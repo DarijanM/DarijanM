@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+    Postavke za JD 7810 (scripts/JD7810Transmission.lua)  -  v4
+    Nakon izmjene u igri upisi u konzolu:  jd7810Reload
+    Sve se moze mijenjati i u voznji:      jd7810Set <kljuc> <vrijednost>
+-->
+<jd7810Settings>
+    <!-- ===== AUTOMATIK (radi samo dok je gas pritisnut) ===== -->
+    <!-- enabled   = vlastiti automatik (false = GIANTS original)                                   [jd7810Set autoShift]  -->
+    <!-- autoRange = false: automatik mijenja samo 1-4, opseg A-E biras ti (kao pravi AutoQuad)
+                     true:  automatik mijenja i opseg                                                [autoRange]            -->
+    <!-- upLight/upHeavy     = iznad ovih o/min ide visa brzina (malo / puno opterecenje)          [upLight, upHeavy]     -->
+    <!-- psUpLight           = Powershift: visa brzina kad je prazan (ne gleda gas, nego stvarni otpor) [psUpLight]   -->
+    <!-- downLight/downHeavy = ispod ovih o/min ide niza brzina (malo / puno opterecenje)          [downLight, downHeavy] -->
+    <!-- blockAcc  = pod teretom nema vise brzine ako traktor usporava vise od ovoga, m/s2          [blockAcc]             -->
+    <!-- interval  = najmanji razmak izmedu dvije promjene, ms (za nizu brzinu pola)               [shiftInterval]        -->
+    <!-- Motor: max moment ~1400, max snaga 1800-1900, nazivno 2100 o/min -->
+    <autoShift enabled="true" autoRange="false" upLight="1850" upHeavy="2150" psUpLight="1950" downLight="1250" downHeavy="1650" blockAcc="-0.05" interval="800"/>
+
+    <!-- ===== OSJECAJ PREBACIVANJA ===== -->
+    <!-- dip       = koliko snage nestane pri powershiftu 1-4 (0 = instant, 1 = potpuno)             [shiftDip]             -->
+    <!-- dipTime   = koliko traje taj pad snage, ms                                                  [shiftDipTime]         -->
+    <!-- rangeTime = prekid snage kad automatik mijenja opseg (spojka), ms                           [rangeShiftTime]       -->
+    <shiftFeel dip="0" dipTime="0" rangeTime="700"/>
+
+    <!-- ===== PREBACIVANJE NA NIZU BRZINU ===== -->
+    <!-- time     = proklizavanje spojke bez gasa (kocenje motorom), ms. Vise = mekse               [slipTime]             -->
+    <!-- timeLoad = proklizavanje pod gasom (uzbrdo), ms. Kratko = ne gubi vucu                      [slipTimeLoad]         -->
+    <!-- timeUp   = powershift NA VISE: spojka preuzima postupno (okretaji glatko padaju), ms         [slipTimeUp]           -->
+    <!-- minSpeed = ispod ove brzine (km/h) nema proklizavanja ni pada snage                         [minSpeed]             -->
+    <downshiftSlip enabled="true" time="600" timeLoad="150" timeUp="150" minSpeed="3"/>
+
+    <!-- ===== MOTOR ===== -->
+    <!-- turbo       = turbo rupa kod naglog gasa                                                    [turbo]                -->
+    <!-- turboTime   = koliko dugo turbo puni do punog tlaka, ms                                     [turboTime]            -->
+    <!-- turboMin    = moment dok turbo nije napunio (0.7 = 70%, 1 = nema rupe)                      [turboMin]             -->
+    <!-- engineBrake = jacina kocenja motorom bez gasa (1 = kao sada, 2 = duplo jace)                [engineBrake]          -->
+    <!-- rpmTau = inercija zamasnjaka: koliko glatko okretaji prate fiziku, s (0 = sirovo, 0.3 = zadano)   [rpmTau]               -->
+    <!-- rpmModulation = GIANTS umjetno titranje okretaja za zvuk/kazaljku (false = mirno kao pravi regulator) [rpmModulation]    -->
+    <engine turbo="true" turboTime="900" turboMin="0.7" engineBrake="1.0" rpmTau="0.30" rpmModulation="false" powerBoost="1.12"/>
+
+    <!-- ===== FIELD CRUISE ===== -->
+    <!-- enabled = Field Cruise (false = iskljucen, kolut na AQ/IVT samo vizualno - Darijan 6.10.2026)  [fieldCruise]          -->
+    <fieldCruise enabled="false"/>
+
+    <!-- ===== KRETANJE S MJESTA ===== -->
+    <!-- slipTime = koliko dugo spojka hvata pri kretanju, ms (GIANTS original 1000)                 [startSlipTime]        -->
+    <start slipTime="1500"/>
+
+    <!-- ===== ZAUSTAVLJANJE ===== -->
+    <!-- enabled = kad traktor stane (bez gasa), odmah odabere brzinu za kretanje prema teretu i nagibu   [startGearAuto] -->
+    <!-- range   = smije pritom promijeniti i opseg A-E (npr. D3 -> B3 s punom prikolicom)             [startRange]    -->
+    <!-- roll / acc / reserve / rpm / maxKmh = izbor brzine za kretanje prema tezini, nagibu i vuci:              -->
+    <!--   potrebna sila = masa x (9,81 x (roll + nagib) + acc) + vuca; stupanj mora imati sila x reserve pri rpm;  -->
+    <!--   bira se najvisi takav stupanj cija je brzina pri maxRpm najvise maxKmh (Powershift najvise 16F / 6R)     -->
+    <stopGear enabled="true" range="true" roll="0.08" acc="0.35" reserve="1.3" rpm="1300" maxKmh="15"/>
+
+    <!-- ===== PTO ===== -->
+    <!-- Pravi 7810: 540 i 1000 PTO, oba pri nazivnih 2100 o/min motora.                                                  -->
+    <!-- enabled = ispravni PTO okretaji (false = GIANTS: 1000 PTO tjera motor na maksimum)              [ptoFix]        -->
+    <!-- rpm540 / rpm1000 = okretaji motora za 540 / 1000 PTO alate                                     [pto540Rpm, pto1000Rpm] -->
+    <pto enabled="true" rpm540="2100" rpm1000="2100"/>
+
+    <!-- ===== RUCNI GAS (numpad + / -) ===== -->
+    <!-- step = korak po pritisku (o/min), min = ispod ovoga se iskljuci, max = najvise                [handStep, handMin, handMax] -->
+    <!-- latch = stari nacin: nakon prvog gasa traktor vozi sam na rucni gas (sada je za to Num 7)  [handLatch] -->
+    <handThrottle step="100" min="900" max="2100" latch="false"/>
+
+    <!-- ===== PTO RAD (v6) ===== -->
+    <!-- manual     = PTO ne dize okretaje sam; brzina alata = okretaji motora / nazivni (AI i dalje dize sam)  [ptoManual]     -->
+    <!-- autoShift  = PTO automatik: dok radi PTO, mijenja 1-4 prema opterecenju da drzi okretaje           [ptoAuto]       -->
+    <!-- speedLimit = sporiji PTO = manja dopustena radna brzina alata                                        [ptoSpeedLimit] -->
+    <!-- clog       = alat se zacepi ako radi pod opterecenjem ispod clogPct nazivne brzine dulje od clogTime  [clog, clogPct, clogTime] -->
+    <!-- toolSound  = zvuk alata prati PTO brzinu u koracima od 10%                                          [toolSound]     -->
+    <!-- toolSpin   = vrtnja dijelova alata prati PTO brzinu                                                  [toolSpin]      -->
+    <ptoWork manual="true" autoRpm="true" autoLoad="false" autoMinPct="0.85" autoLoadLow="0.30" autoLoadHigh="0.70" autoRpmUp="700" autoRpmDown="900" autoShift="true" speedLimit="true" clog="true" clogPct="0.6" clogTime="3000" toolSound="true" toolSpin="true"/>
+
+    <!-- ===== IVT POLUGA ===== -->
+    <!-- tiltDir / sideDir = 1 ili -1, ako se poluga u igri naginje ili pomice na krivu stranu   [ivtTiltDir, ivtSideDir] -->
+    <ivtLever tiltDir="1" sideDir="1" handDir="1"/>
+
+    <!-- ===== IVT REGULACIJA OKRETAJA (samo IVT izvedba) ===== -->
+    <!-- mode     = pocetni polozaj biraca: 0=OFF, 1=PTO/utovarivac, 2=obrada, 3=transport   [ivtMode]    -->
+    <!-- loadRpm  = okretaji koje IVT drzi pod opterecenjem (uspori voznju umjesto da gusi)   [ivtLoadRpm] -->
+    <!-- min1..3  = najmanje okretaje bez opterecenja za polozaje 1, 2, 3                     [ivtMin1..3] -->
+    <!-- loadOn / loadOff = granice opterecenja (ukljuci / iskljuci drzanje loadRpm)          [ivtLoadOn, ivtLoadOff] -->
+    <!-- rate     = brzina promjene donje granice, o/min u sekundi                            [ivtRate]    -->
+    <!-- ecoReserve = polozaj 2/3 (stednja goriva): bez tereta motor radi na najnizim okretajima koji daju potrebnu snagu x ecoReserve [ivtEcoReserve] -->
+    <!-- offLugRpm = OFF: pod teretom motor padne na ove okretaje (do +200), manje snage nego 1950 u polozajima 1-3 [ivtOffLugRpm] -->
+    <!-- OFF = IVT ne mijenja omjer pod teretom (motor pada, brzina pada s okretajima) - OMAR206904 "IVT Selector Examples" -->
+    <ivt mode="2" loadRpm="1950" min1="2000" min2="1500" min3="1200" loadOn="0.80" loadOff="0.60" rate="800" ecoReserve="1.5" offLugRpm="1300"/>
+
+    <!-- ===== VUCA PRIKLJUCAKA (JD7810Draft.lua) ===== -->
+    <!-- Sila = tlo x (A + B*v + C*v^2) x sirina x dubina x vlaga x scale (model ASABE D497; v u km/h). Zamjenjuje stalnu silu (maxForce) prikljucka dok je na ovom traktoru. -->
+    <!-- enabled = ukljuceno                      [draft]      -->
+    <!-- scale   = ukupni faktor (1 = model)      [draftScale] -->
+    <!-- soil    = 1 tesko (glina), 2 srednje (ilovaca), 3 lagano (pijesak)   [draftSoil] -->
+    <!-- wet     = povecanje vuce na potpuno mokrom tlu (0.15 = +15 %)         [draftWet]  -->
+    <!-- depthPlow / depthDeep / depthCult / depthSub = radna dubina u cm: plug / duboki kultivator / kultivator i tanjurace / podrivac -->
+    <!-- log = test: svake 2 s redak "JD7810: TEST" u log.txt dok prikljucak radi [draftLog] -->
+    <draft enabled="true" log="true" scale="1.0" soil="2" wet="0.15" depthPlow="25" depthDeep="20" depthCult="10" depthSub="35"/>
+
+    <!-- ===== OTPOR KOTRLJANJA (igra ga nema) ===== -->
+    <!-- sila po kotacu = koeficijent podloge x teret kotaca x g, traktor + svi prikljucci/prikolice (puna prikolica se osjeti)  -->
+    <!-- podloga kao u igri (WheelsUtil.getGroundType): road asfalt/objekti, hard tvrdi teren, soft meki teren, field polje      -->
+    <!-- izvor koeficijenata: ASABE D497 / Wong (Theory of Ground Vehicles) - asfalt 0,01-0,02, suho strnjiste 0,04-0,06, mokro/rahlo 0,10-0,20 -->
+    <!-- scale = ukupni faktor [rollScale], wet = povecanje na potpuno mokrom tlu, 1.0 = +100 % (polje suho 0,05 -> mokro 0,10) [rollWet] -->
+    <!-- ===== TEST POGONA (privremeno) ===== -->
+    <!-- test = 1: dok traktor vozi, 6 faza po 10 s (nas MFWD / XML / 2WD / blokada / original igre / nas bez vuce), zapis u log; 0 = iskljuceno  [driveTest] -->
+    <mfwd test="0" dynamic="true"/>
+
+    <rolling enabled="true" scale="1.0" road="0.015" hard="0.03" soft="0.045" field="0.05" wet="1.0"/>
+    <!-- ===== TRENJE GUMA (v136) ===== -->
+    <!-- road = faktor na asfaltu/tvrdom tlu (x frictionScale gume 1,60 -> 0,80 = stvarna guma na suhom asfaltu; prag prevrtanja 7810 je ~0,9 g, pa ostar zavoj = klizanje prednjih kotaca, ne prevrtanje) [tractionRoad] -->
+    <!-- field = faktor na polju/mekom tlu (1.0 = vuca kao igra) [tractionField]; 1.0/1.0 = ponasanje igre -->
+    <!-- v182 (Darijan 9.10.): 0.50 je stao s 30 t na suhoj cesti -> 1.0 (kao igra); mora izvuci i veliki uspon barem u A1 -->
+    <traction road="1.0" field="1.0"/>
+
+    <!-- v174 gume (Brixius / ASABE D497.4): vuca, proklizavanje i otpor kotrljanja prema sirini/promjeru gume, duplima, teretu i tlu (orano/kultivirano/strniste/trava, vlaga) [tyreModel] -->
+    <!-- deflection = ugib/visina boka (tlak za polje) [tyreDefl]; stiffRoad / stiffField = kalibracija krutosti (proklizavanje) [tyreStiffRoad/Field]; wetGrass = mokra trava (0-1); furrow = desni kotaci u brazdi pri oranju -->
+    <tyreModel enabled="true" deflection="0.22" stiffRoad="1.5" stiffField="1.0" wetGrass="0.25" furrow="true" inflate="0.005" deflate="0.01"/>
+
+    <!-- ===== AUTOQUAD II / GUME (OMAR206904) ===== -->
+    <!-- ecoShift  = AQ ECO: za koliko o/min ranije prebacuje na visu                        [aqEcoShift]    -->
+    <!-- scale     = brzine u stupnjevima prema odabranim gumama (referenca 20.8R38)         [tyreScale]     -->
+    <!-- refRadius = polumjer 20.8R38 u igri, m (log: "gume: polumjer ...")                  [tyreRefRadius] -->
+    <autoQuad ecoShift="300"/>
+
+    <!-- v172 IVT mehanicki stupnjevi LOW/HIGH (Nebraska 1807: dva stupnja, automatski). up/down = km/h pri 2100 o/min (procjena) [ivtRangeUp/Down] -->
+    <!-- hydroLoss = najveci gubitak hidraulike na krajevima stupnja (0 = bez) [ivtHydroLoss]; dip/dipTime = pad momenta pri promjeni; hud = HUD redak -->
+    <ivtRange enabled="true" up="16" down="14.7" hydroLoss="0.10" dip="0.05" dipTime="150" hud="true"/>
+    <tyres scale="true" refRadius="0.908"/>
+
+    <!-- ===== FONT NA PERFORMANCE MONITORU I MOBITELU ===== -->
+    <!-- enabled = znamenke fontom igre (DIGIT) umjesto 7 segmenata; promjena tek nakon restarta   [segFont]      -->
+    <!-- scale    = visina znaka (1 = razmak gornjeg i donjeg segmenta)                          [segFontScale]    -->
+    <!-- scaleX   = sirina znaka (sabijanje vodoravno)                                          [segFontScaleX]   -->
+    <!-- scaleGsm = dodatni faktor velicine na mobitelu                                         [segFontScaleGsm] -->
+    <!-- yOff     = okomiti pomak u udjelu visine (+ gore)                                      [segFontYOff]     -->
+    <!-- scale/scaleX/scaleGsm/yOff vrijede odmah nakon jd7810Reload                                              -->
+    <segFont enabled="false" scale="0.8" scaleX="0.75" scaleGsm="0.85" yOff="0"/>
+
+    <!-- ===== ZVUK (1 = original) ===== -->
+    <!-- gearChange = mijenjanje brzina, poluge, spojka          [gearSound]    -->
+    <!-- gearbox    = zujanje mjenjaca u voznji                  [gearboxSound] -->
+    <!-- engine     = motor                                      [engineSound]  -->
+    <!-- tires      = gume na podlozi (asfalt, makadam, polje)   [tireSound]    -->
+    <sound gearChange="0.35" gearbox="1.0" engine="1.25" tires="1.4" switch="0.6" tireWidth="1.0"/>
+
+    <!-- ===== PRIKAZ ===== -->
+    <debug enabled="false"/>
+
+    <!-- ===== HMS / GreenStar terminal (JD7810Hms.lua) ===== -->
+    <!-- rows = redovi uvratine, mode 0 = MANUAL / 1 = SEMI-AUTO (oznaka), sound, pto/diff = work mode AUTO, workRpm = radni okretaji (0 = ne diraj),
+         lightbarCm = cm po segmentu trake, font 1 = GENERIC (slova) / 0 = DIGIT, textSize mm, vSelDir = smjer gumba biraca V (1 / -1) -->
+    <hms rows="2" mode="0" sound="true" pto="true" diff="true" workRpm="1950" lightbarCm="5" lightbarDir="-1" font="1" textSize="4.5" vSelDir="1"/>
+
+    <!-- ===== KABINA / TELEMETRIJA (JD7810Seat.lua; skripte sjedala uklonjene v153) ===== -->
+    <!-- telemetry hz = uzorci u sekundi (jd7810Tele on) -->
+    <!-- vidno polje kamera (fov Y, stupnjevi): svaka kamera u kabini / svaka vanjska; nakon izmjene jd7810Reload -->
+    <camera fovInside="65" fovOutside="65"/>
+    <telemetry hz="20" autostart="false"/>
+</jd7810Settings>
